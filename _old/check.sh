@@ -1,0 +1,1 @@
+fswatch -o ~/Desktop/source_reportinator/ | xargs -n1 python send.py
