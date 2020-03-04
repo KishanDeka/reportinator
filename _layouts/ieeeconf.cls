@@ -666,7 +666,12 @@
 %\typeout{-- See the "IEEEtran_HOWTO" manual for usage information.}
 %\typeout{-- The source comments contain changelog notes.}
 \NeedsTeXFormat{LaTeX2e}
-
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{float}
 % define new needed flags to indicate document options
 % and set a few "failsafe" defaults
 \newif\if@twocolumnmode      \global\@twocolumnmodetrue
@@ -1987,7 +1992,7 @@
 \if@confmode
 \centerfigcaptionstrue
 \else
-\centerfigcaptionsfalse
+\centerfigcaptionstrue
 \fi
 
 % article class provides these, we should too.
