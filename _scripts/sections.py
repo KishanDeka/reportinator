@@ -1,7 +1,11 @@
-## !!Incomplete, wont work!!
+## Almost done, but don't run
 import os
 import pandas as pd
 import csv
+
+# METADATA
+documentstyle = "ieeeconf" #change for meta.csv
+author = "Spandan Anupam" #change for meta.csv
 
 # MAKE FILE, CODE and CSV LISTS
 source_csv = []
@@ -16,8 +20,24 @@ for file in os.listdir("../_assets/csvs"):
     source_csv.append(file)
 
 # CODE FOR WRITING
+
+print ("\\documentstyle{../_layouts/"+documentstyle+"}\n")
+print ("\\author{"+author+"}\n")
+print ("\\date{"+"\\today"+"}")
+
 for file in file_list:
     ## We have the file[1:] to account for naming as 1Abc. The ordering is set by the numbering in front.
+    
+    # ABSTRACT
+    if file[1:] == "Abstract":
+        with open('_outputs/sections.txt', 'a') as f:
+            name = file[1:] 
+            print ("\\begin{"+name+"}")
+        f = open("../_assets/texts/"+file, 'r')
+        file_contents = f.read()
+        with open('_outputs/sections.txt', 'a') as f:
+            print (file_contents)
+
     # TABLES
     if file[1:] == "Observations":
         with open('_outputs/sections.txt', 'a') as f:

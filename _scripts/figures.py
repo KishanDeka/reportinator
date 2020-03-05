@@ -46,8 +46,7 @@ def plot(x_name, y_name, data):
 
 def pregraph(name):
     location = "../_assets/"+name+".pdf"
-    with open('_outputs/graphs.txt', 'a') as f: 
-        print ('\\begin{center}'+'\n'+'\includegraphics[0.7\\textwidth]'+'{'+location+'}'+'\n' +'\end{center}', file=f)
+    print ('\\begin{center}'+'\n'+'\includegraphics[0.7\\textwidth]'+'{'+location+'}'+'\n' +'\end{center}')
     return 0
 # def fit():
 #     if fun == "expo":
