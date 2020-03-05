@@ -17,7 +17,7 @@ for file in os.listdir("../_assets/csvs"):
 
 # CODE FOR WRITING
 for file in file_list:
-
+    ## We have the file[1:] to account for naming as 1Abc. The ordering is set by the numbering in front.
     # TABLES
     if file[1:] == "Observations":
         with open('_outputs/sections.txt', 'a') as f:
