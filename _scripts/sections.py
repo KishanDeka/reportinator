@@ -3,10 +3,10 @@ import os
 import pandas as pd
 import csv
 
+# MAKE FILE, CODE and CSV LISTS
 source_csv = []
 file_list = []
 code_list = []
-
 for file in os.listdir("../_assets/texts"):
     file_list.append(file)
 file_list.sort()
@@ -22,7 +22,7 @@ for file in file_list:
     if file[1:] == "Observations":
         with open('_outputs/sections.txt', 'a') as f:
             name = file[1:] 
-            print ("\\section{"+name+"}",file=f)
+            print ("\\section{"+name+"}")
         for source in source_csv:
             exec("python tably.py source --tags")    
             # figure out exactly
@@ -32,7 +32,7 @@ for file in file_list:
         if file[1:] == "Graphs":
             with open('_outputs/sections.txt', 'a') as f:
                 name = file[1:] 
-                print ("\\section{"+name+"}",file=f)
+                print ("\\section{"+name+"}")
         for source in source_csv:
             # read last line
             csv_path = "../assets/csvs"+source
