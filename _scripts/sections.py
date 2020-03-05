@@ -1,5 +1,4 @@
 ## !!Incomplete, wont work!!
-
 import os
 import pandas as pd
 import csv
@@ -15,8 +14,6 @@ for file in os.listdir("../_scripts"):
     code_list.append(file)
 for file in os.listdir("../_assets/csvs"):
     source_csv.append(file)
-
-tables_config = pd.read_csv("../_assets/tables_config.csv")
 
 # CODE FOR WRITING
 for file in file_list:
@@ -36,9 +33,9 @@ for file in file_list:
             with open('_outputs/sections.txt', 'a') as f:
                 name = file[1:] 
                 print ("\\section{"+name+"}",file=f)
-        for file in source_csv:
+        for source in source_csv:
             # read last line
-            csv_path = "../assets/csvs"+file
+            csv_path = "../assets/csvs"+source
             with open (csv_path) as f:
                 data = f.readlines()
             lastline = data[-1]
@@ -55,7 +52,8 @@ for file in file_list:
                 while i < len(graph_list):
                     X = graph_list[i]
                     Y = graph_list[i+1]
-                    figure = "python figures.py --file "+file+" -x "+X+" -y "+Y
+                    figure = "python figures.py --file "+source+" -x "+X+" -y "+Y
+                    exec(figure)
                     i+=2
             
 
