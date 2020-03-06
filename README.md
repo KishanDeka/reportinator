@@ -60,7 +60,5 @@ Ideally, the final program should run automatically if we just put in data into 
 
 ## To Do List:
 - Completion and adaption of tably by [narimiran](https://github.com/narimiran/tably)
-- Completion of the config script taking initial configuration from the user
-- Individual class files for easy use
-- Data management and automation
 - Fit functions
+- Make it cooler, somehow
