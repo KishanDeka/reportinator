@@ -1,0 +1,16 @@
+PWD /Users/spandan/Documents/Git/reportinator/tex_out
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/spandan/Documents/Git/reportinator/tex_out/report.tex
+OUTPUT /Users/spandan/Documents/Git/reportinator/tex_out/report.log
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/latex209.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/latex209.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/tracefnt.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/tracefnt.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/latexsym.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/latexsym.sty
+INPUT /Users/spandan/Documents/Git/reportinator/tex_out/../_layouts/ieeeconf.cls
+INPUT /Users/spandan/Documents/Git/reportinator/tex_out/../_layouts/ieeeconf.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd

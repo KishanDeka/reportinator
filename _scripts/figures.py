@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Program for plotting and fitting f
 parser.add_argument('--file', required=True, help="Input the name of the csv file to be converted into a figure, placed in assets")
 parser.add_argument('-x', required=True, help="Input the column number for x")
 parser.add_argument('-y', required=True, help="Input the column number for y")
-#parser.add_argument('--fit', required=False, help="Input the fit function")
+# parser.add_argument('--fit', required=False, help="Input the fit function")
 args = parser.parse_args()
 
 #inputs and initializations
@@ -31,8 +31,6 @@ def plot(x_name, y_name, data):
     x = data[x_name]
     y = data[y_name]
     f = plt.figure()
-    print (x)
-    print (y)
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
     plt.plot (x,y,'bo', label="Observed Data")
@@ -41,11 +39,11 @@ def plot(x_name, y_name, data):
     plt.xlabel(r'%s' % x_name,fontsize = 11)
     plt.ylabel(r'%s'% y_name,fontsize = 11)
     plt.legend()
-    f.savefig("../_assets/"+y_name+".pdf", bbox_inches = 'tight')
+    f.savefig("../_assets/"+y_name.split(" ")[0]+".pdf", bbox_inches = 'tight')
     return y_name
 
 def pregraph(name):
-    location = "../_assets/"+name+".pdf"
+    location = "../_assets/"+name.split(" ")[0]+".pdf"
     print ('\\begin{center}'+'\n'+'\includegraphics[0.7\\textwidth]'+'{'+location+'}'+'\n' +'\end{center}')
     return 0
 # def fit():

@@ -3,8 +3,8 @@ import csv
 import pandas as pd
 
 # Clean out the process folder
-exec("rm ../_assets/process/*")
-exec("rm ../_assets/texts/*")
+os.system("rm ../_assets/process/*")
+os.system("rm ../_assets/texts/*")
 
 # Separate into numbers
 with open("../_assets/input.txt", "r") as f:
@@ -22,10 +22,12 @@ with open("../_assets/input.txt", "r") as f:
 
 # Rename and remove
 for file in os.listdir("../_assets/process"):
-    with open (file, 'r') as f:
+    with open ("../_assets/process/"+file, 'r') as f:
         data = f.read().splitlines(True)
-        firstline = f.readline()
+        data = data[:-1]
+        firstline = data[0]
+        lastline = data[-1]
         title = firstline[:-1]
-        title = "../assets/texts/"+title
+        title = "../_assets/texts/"+title
     with open(title, 'w') as fout:
         fout.writelines(data[1:])

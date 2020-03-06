@@ -1,0 +1,10 @@
+5Results and Conclusion:
+We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m$^2$. Substituting: P = 5, $\nu = 14.37 \times 10^6 Hz$ and slope = 0.195 in eq \ref{eq} we also get $g = 1.565$, which is pretty close to it's actual value.
+\section{Precautions:}
+\begin{itemize}
+	\item Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
+	\item The magnet must be dropped as vertically as possible
+\end{itemize}
+\section{References}
+Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319–325.
+;

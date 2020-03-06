@@ -1,0 +1,7 @@
+1Objective:
+The objectives of this two part disjoint experiment series will be to:
+\begin{itemize}
+	\item Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
+	\item Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
+\end{itemize}
+;
