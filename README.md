@@ -2,7 +2,29 @@
 Aim: To make and mail beautiful reports written in latex, with the help of `tably` and some hand written code.
 
 ## Usage:
-This project is still under construction, and will take some days to get to its full functional capacity. Right now, the help section of `figures.py` is active. It can be turned on by:
+This project is still under construction, and will take some days to get to its full functional capacity. 
+Almost all of the python scripts are done, and will be up in a few days. The current implementation calls for the text to be written in `_assets/input.txt.`
+There is a specific format for the text to be written, that looks something like this:
+
+```shell
+1Abstract:
+abc
+;
+2Introduction
+def
+;
+3Observations
+ghi
+;
+4Graphs
+jkl
+;
+5Conclusion
+asfasf
+;
+```
+
+Right now, the help section of `figures.py` is active. It can be turned on by:
 ```shell
 cd download_dir/reportinator/_scripts/
 python figures.py --help
