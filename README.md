@@ -23,6 +23,12 @@ jkl
 asfasf
 ;
 ```
+If you do have csv files in `_assets/csvs`, then you will have your tables tabled and graphs plotted. For plotting graphs, you need one line at the end of the csv file:
+
+```shell
+graph(x,y,x,y,x,y..)
+```
+Where x and y are the X,Y columns for the graph plotting. Fitting capabilities are to be added soon.
 
 Right now, the help section of `figures.py` is active. It can be turned on by:
 ```shell
