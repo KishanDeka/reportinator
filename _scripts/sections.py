@@ -1,7 +1,10 @@
-## Almost done, but don't run
+## Almost done, but don't run, no fallback options edited in
 import os
 import pandas as pd
 import csv
+
+# GETTING DATA
+exec("python separate.py")
 
 # METADATA
 documentstyle = "ieeeconf" #change for meta.csv
@@ -20,7 +23,6 @@ for file in os.listdir("../_assets/csvs"):
     source_csv.append(file)
 
 # CODE FOR WRITING
-
 print ("\\documentstyle{../_layouts/"+documentstyle+"}\n")
 print ("\\author{"+author+"}\n")
 print ("\\date{"+"\\today"+"}")
@@ -30,9 +32,8 @@ for file in file_list:
     
     # ABSTRACT
     if file[1:] == "Abstract":
-        with open('_outputs/sections.txt', 'a') as f:
-            name = file[1:] 
-            print ("\\begin{"+name+"}")
+        name = file[1:] 
+        print ("\\begin{"+name+"}")
         f = open("../_assets/texts/"+file, 'r')
         file_contents = f.read()
         with open('_outputs/sections.txt', 'a') as f:
@@ -40,19 +41,18 @@ for file in file_list:
 
     # TABLES
     if file[1:] == "Observations":
-        with open('_outputs/sections.txt', 'a') as f:
-            name = file[1:] 
-            print ("\\section{"+name+"}")
+        name = file[1:] 
+        print ("\\section{"+name+"}")
         for source in source_csv:
-            exec("python tably.py source --tags")    
+            print ("a")
+            # exec("python tably.py source --tags")    
             # figure out exactly
 
     # GRAPHS
     elif file[1:] == "Graphs":
         if file[1:] == "Graphs":
-            with open('_outputs/sections.txt', 'a') as f:
-                name = file[1:] 
-                print ("\\section{"+name+"}")
+            name = file[1:] 
+            print ("\\section{"+name+"}")
         for source in source_csv:
             # read last line
             csv_path = "../assets/csvs"+source
@@ -79,9 +79,8 @@ for file in file_list:
 
     # NEW CODE AND REST   
     else:
-        with open('_outputs/sections.txt', 'a') as f:
-            name = file[1:]
-            print ("\\section{"+name+"}",file=f)
+        name = file[1:]
+        print ("\\section{"+name+"}")
         f = open("../_assets/texts/"+file, 'r')
         file_contents = f.read()
         with open('_outputs/sections.txt', 'a') as f:
