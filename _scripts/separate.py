@@ -13,7 +13,7 @@ with open("../_assets/input.txt", "r") as f:
     for line in f:
         if line.strip():  #skips the empty lines
            buff.append(line)
-        if line.strip() == ";":
+        if line.strip() == "%%":
            output = open('../_assets/process/%d.txt' % i,'w')
            output.write(''.join(buff))
            output.close()
@@ -27,7 +27,13 @@ for file in os.listdir("../_assets/process"):
         data = data[:-1]
         firstline = data[0]
         lastline = data[-1]
-        title = firstline[:-1]
+        title = firstline[2:-1]
         title = "../_assets/texts/"+title
     with open(title, 'w') as fout:
         fout.writelines(data[1:])
+
+for file in os.listdir("../_assets/texts"):
+    os.system("mv ../_assets/texts/"+file+" ../_assets/texts/"+file+".md")
+    os.system("pandoc -f markdown -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
+    os.system("rm ../_assets/texts/"+file+".md")
+    os.system("mv ../_assets/texts/"+file+".tex "+"../_assets/texts/"+file)

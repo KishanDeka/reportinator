@@ -1,18 +1,2 @@
-4Graphs:
-\begin{figure}[H]
-\includegraphics[width=0.8\columnwidth]{esr.png}
-\centering
-\caption{ESR Plot}
-\end{figure}
-\begin{figure}[H]
-\includegraphics[width=0.8\columnwidth]{emf.png}
-\centering
-\caption{Plotted Induced EMF}
-\end{figure}
-\begin{figure}[H]
-\includegraphics[width=0.8\columnwidth]{photo.png}
-\centering
-\caption{Time-Voltage plot for the photodiode}
-\end{figure}
-\clearpage
-;
+# 4Graphs:
+%%

@@ -13,6 +13,7 @@ os.system("python separate.py")
 # METADATA
 documentstyle = "ieeeconf" # change for meta.csv
 author = "Spandan Anupam" # change for meta.csv
+title = "Test"
 
 # MAKE FILE, CODE and CSV LISTS
 source_csv = []
@@ -28,8 +29,9 @@ for file in os.listdir("../_assets/csvs"):
 
 # CODE FOR WRITING
 
-print ("\\documentstyle{../_layouts/"+documentstyle+"}\n")
+print ("\\documentclass{../_layouts/"+documentstyle+"}\n")
 print ("\\begin{"+"document}\n")
+print ("\\title{"+title+"}\n")
 print ("\\author{"+author+"}\n")
 print ("\\date{"+"\\today"+"}")
 print ("\maketitle\n")
@@ -40,14 +42,14 @@ for file in file_list:
     # ABSTRACT
     if file[1:] == "Abstract:":
         name = file[1:] 
-        print ("\\begin{"+name+"}")
+        print ("\\begin{"+"abstract"+"}")
         f = open("../_assets/texts/"+file, 'r')
         file_contents = f.read()
         print (file_contents)
-        print ()
+        print ("\\end{"+"abstract"+"}")
 
     # TABLES
-    if file[1:] == "Observations:":
+    elif file[1:] == "Observations:":
         name = file[1:] 
         print ("\\section{"+name+"}")
         for source in source_csv:
