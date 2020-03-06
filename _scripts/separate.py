@@ -7,7 +7,7 @@ os.system("rm ../_assets/process/*")
 os.system("rm ../_assets/texts/*")
 
 # Separate into numbers
-with open("../_assets/input.txt", "r") as f:
+with open("../_assets/input.md", "r") as f:
     buff = []
     i = 1
     for line in f:

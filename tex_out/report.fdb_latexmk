@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1583517927 "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf" "report" 1583517927
+["pdflatex"] 1583518735 "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf" "report" 1583518735
+  "../_assets/Temperature.pdf" 1583518695 37209 953349182fe34aa716a5224292e94d39 ""
   "../_layouts/ieeeconf.cls" 1583260562 197557 6dd7da398dcc2f563b39933f2e6c8de4 ""
-  "/Users/spandan/Documents/Git/reportinator/tex_out/report.aux" 1583517927 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" 1583517923 6965 cb6073e0213830b803dde4d08f689d03 ""
+  "/Users/spandan/Documents/Git/reportinator/tex_out/report.aux" 1583518735 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" 1583518731 7077 e3ddaf9eeb6f863559cfd34c1f7a8028 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -83,10 +84,10 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1535098869 4220280 a7ca95ab0ec65fce507b9d4b487b328c ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "report.aux" 0 -1 0 ""
-  "report.tex" 1583517923 6965 cb6073e0213830b803dde4d08f689d03 ""
+  "report.tex" 1583518731 7077 e3ddaf9eeb6f863559cfd34c1f7a8028 ""
   (generated)
-  "report.aux"
-  "/Users/spandan/Documents/Git/reportinator/tex_out/report.log"
-  "report.log"
   "report.pdf"
+  "report.log"
+  "report.aux"
   "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf"
+  "/Users/spandan/Documents/Git/reportinator/tex_out/report.log"
