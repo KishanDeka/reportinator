@@ -7,7 +7,7 @@ os.system("rm ../_assets/process/*")
 os.system("rm ../_assets/texts/*")
 
 # Separate into numbers
-with open("../_assets/input.md", "r") as f:
+with open("../input.md", "r") as f:
     buff = []
     i = 1
     for line in f:
@@ -34,6 +34,6 @@ for file in os.listdir("../_assets/process"):
 
 for file in os.listdir("../_assets/texts"):
     os.system("mv ../_assets/texts/"+file+" ../_assets/texts/"+file+".md")
-    os.system("pandoc -f markdown -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
+    os.system("pandoc -f markdown-auto_identifiers --filter pandoc-eqnos --wrap=preserve -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
     os.system("rm ../_assets/texts/"+file+".md")
     os.system("mv ../_assets/texts/"+file+".tex "+"../_assets/texts/"+file)

@@ -672,6 +672,8 @@
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
 % define new needed flags to indicate document options
 % and set a few "failsafe" defaults
 \newif\if@twocolumnmode      \global\@twocolumnmodetrue

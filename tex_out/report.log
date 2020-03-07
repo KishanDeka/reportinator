@@ -1,13 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.24)  6 MAR 2020 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.24)  7 MAR 2020 13:48
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/spandan/Documents/Git/reportinator/tex_out/report.tex
-(/Users/spandan/Documents/Git/reportinator/tex_out/report.tex
+**report.tex
+(./report.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/Users/spandan/Documents/Git/reportinator/tex_out/../_layouts/ieeeconf.cls
+(../_layouts/ieeeconf.cls
 
 LaTeX Warning: You have requested document class `../_layouts/ieeeconf',
                but the document class provides `ieeeconf'.
@@ -15,50 +14,63 @@ LaTeX Warning: You have requested document class `../_layouts/ieeeconf',
 Document Class: ieeeconf 2004/1/15 revision V1.6b by Pradeep Misra
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen102
 \Gin@req@width=\dimen103
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/was/gensymb.sty
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen104
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count80
@@ -98,7 +110,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count92
 \float@exts=\toks21
@@ -106,84 +119,151 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box29
 )
-\@IEEEtrantmpdimenA=\dimen113
-\@IEEEtrantmpdimenB=\dimen114
-\@IEEEtrantmpcountA=\count93
-\@IEEEtrantmpcountB=\count94
-\@IEEEtrantmptoksA=\toks23
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 797.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen113
+\lightrulewidth=\dimen114
+\cmidrulewidth=\dimen115
+\belowrulesep=\dimen116
+\belowbottomsep=\dimen117
+\aboverulesep=\dimen118
+\abovetopsep=\dimen119
+\cmidrulesep=\dimen120
+\cmidrulekern=\dimen121
+\defaultaddspace=\dimen122
+\@cmidla=\count93
+\@cmidlb=\count94
+\@aboverulesep=\dimen123
+\@belowrulesep=\dimen124
+\@thisruleclass=\count95
+\@lastruleclass=\count96
+\@thisrulewidth=\dimen125
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen126
+\ar@mcellbox=\box30
+\extrarowheight=\dimen127
+\NC@list=\toks23
+\extratabsurround=\skip44
+\backup@length=\skip45
+\ar@cellbox=\box31
+)
+\everycr=\toks24
+\minrowclearance=\skip46
+)
+\rownum=\count97
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+\@IEEEtrantmpdimenA=\dimen128
+\@IEEEtrantmpdimenB=\dimen129
+\@IEEEtrantmpcountA=\count98
+\@IEEEtrantmpcountB=\count99
+\@IEEEtrantmptoksA=\toks25
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 799.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\@IEEEnormalsizefontbaselineskip=\skip44
+\@IEEEnormalsizefontbaselineskip=\skip47
 
 -- This is a 10 point document.
-\normalsizebaselineskip=\skip45
-\normaljot=\skip46
+\normalsizebaselineskip=\skip48
+\normaljot=\skip49
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1118.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1116.
-\IEEEilabelindentA=\dimen115
-\IEEEilabelindentB=\dimen116
-\IEEEilabelindent=\dimen117
-\IEEEelabelindent=\dimen118
-\IEEEdlabelindent=\dimen119
-\labelindent=\dimen120
-\IEEEiednormlabelsep=\dimen121
-\IEEEiedmathlabelsep=\dimen122
-\IEEEiedtopsep=\skip47
-\c@section=\count95
-\c@subsection=\count96
-\c@subsubsection=\count97
-\c@paragraph=\count98
-\c@IEEEsubequation=\count99
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\c@figure=\count100
-\c@table=\count101
-\@IEEEeqnnumcols=\count102
-\@IEEEeqncolcnt=\count103
-\@IEEEtmpitemindent=\dimen123
-\c@biography=\count104
-\@IEEEtranrubishbin=\box30
-) (/Users/spandan/Documents/Git/reportinator/tex_out/report.aux)
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1118.
+
+\IEEEilabelindentA=\dimen130
+\IEEEilabelindentB=\dimen131
+\IEEEilabelindent=\dimen132
+\IEEEelabelindent=\dimen133
+\IEEEdlabelindent=\dimen134
+\labelindent=\dimen135
+\IEEEiednormlabelsep=\dimen136
+\IEEEiedmathlabelsep=\dimen137
+\IEEEiedtopsep=\skip50
+\c@section=\count100
+\c@subsection=\count101
+\c@subsubsection=\count102
+\c@paragraph=\count103
+\c@IEEEsubequation=\count104
+\abovecaptionskip=\skip51
+\belowcaptionskip=\skip52
+\c@figure=\count105
+\c@table=\count106
+\@IEEEeqnnumcols=\count107
+\@IEEEeqncolcnt=\count108
+\@IEEEtmpitemindent=\dimen138
+\c@biography=\count109
+\@IEEEtranrubishbin=\box32
+) (./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -198,36 +278,45 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
- (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen124
-\scratchbox=\box31
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen125
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count110
+\scratchdimen=\dimen139
+\scratchbox=\box33
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen140
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -235,9 +324,12 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-))) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -245,12 +337,16 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 LaTeX Info: Redefining \celsius on input line 3.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 3.
@@ -263,138 +359,64 @@ Package gensymb Info: Using \Omega for \ohm on input line 3.
 
 Package gensymb Warning: Not defining \micro.
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:25: Undefined control sequence.
-l.25 \hypertarget
-                 {electron-spin-resonance}{%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
 
 
-]
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:100: Undefined control sequence.
-l.100         \toprule
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (21.47504pt too wide) detected at line 50
+\OML/cmm/m/it/10 EMF \OT1/cmr/m/n/10 = [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 
+z[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B
+ \OML/cmm/m/it/10 gt[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 + (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 z[]
+ \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B \O
+ML/cmm/m/it/10 gt[]\OT1/cmr/m/n/10 )[])[] \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10
+ gt
+ []
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:101: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
-l.101 ...erature (K) & Capacitance (nF) & \epsilon
+l.71 ...perature (K) & Capacitance (nF) & \epsilon
                                                    \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:102: Extra }, or forgotten $.
-<template> \unskip \hfil }
-                          \endtemplate 
-l.102         \midrule
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:102: Missing $ inserted.
+? q
+OK, entering \batchmode...
+! Missing $ inserted.
 <inserted text> 
                 $
-l.102         \midrule
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:102: Missing } inserted.
-<inserted text> 
-                }
-l.102         \midrule
-                      
+l.72         \midrule
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:102: Undefined control sequence.
-<recently read> \midrule 
-                         
-l.102         \midrule
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:127: Undefined control sequence.
-<recently read> \bottomrule 
-                            
-l.127         \bottomrule
-                         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:133: Undefined control sequence.
-l.133         \toprule
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+]
+<../_assets/Capacitance.pdf, id=18, 504.5693pt x 351.44759pt>
+File: ../_assets/Capacitance.pdf Graphic file (type pdf)
+<use ../_assets/Capacitance.pdf>
+Package pdftex.def Info: ../_assets/Capacitance.pdf  used on input line 122.
+(pdftex.def)             Requested size: 245.71811pt x 171.149pt.
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:135: Undefined control sequence.
-<recently read> \midrule 
-                         
-l.135         \midrule
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Reference `eq' on page 2 undefined on input line 125.
 
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:146: Undefined control sequence.
-<recently read> \bottomrule 
-                            
-l.146         \bottomrule
-                         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<../_assets/Temperature.pdf, id=18, 520.5095pt x 352.5587pt>
-File: ../_assets/Temperature.pdf Graphic file (type pdf)
-<use ../_assets/Temperature.pdf>
-Package pdftex.def Info: ../_assets/Temperature.pdf  used on input line 152.
-(pdftex.def)             Requested size: 245.71811pt x 166.43423pt.
-
-LaTeX Warning: Reference `eq' on page 2 undefined on input line 157.
-
-/Users/spandan/Documents/Git/reportinator/tex_out/report.tex:162: Undefined control sequence.
+! Undefined control sequence.
 <recently read> \tightlist 
                            
-l.162 \tightlist
+l.129 \tightlist
                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -402,24 +424,34 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[2 <../_assets/Temperature.pdf>] (/Users/spandan/Documents/Git/reportinator/tex_out/report.aux)
+ [2 <../_assets/Capacitance.pdf>] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3034 strings out of 492649
- 44193 string characters out of 6129622
- 117496 words of memory out of 5000000
- 6866 multiletter control sequences out of 15000+600000
+ 3655 strings out of 492649
+ 50930 string characters out of 6129622
+ 135932 words of memory out of 5000000
+ 7471 multiletter control sequences out of 15000+600000
  39991 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,29p,323b,213s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/spandan/Documents/Git/reportinator/tex_out/report.pdf (2 pages, 152799 bytes).
+ 48i,10n,37p,530b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-
+dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
+/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/ur
+w/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on report.pdf (2 pages, 152473 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream

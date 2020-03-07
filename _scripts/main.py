@@ -6,14 +6,20 @@ import csv
 # EXTRACT FUNCTION
 def extract(string, start='(', stop=')'):
     return string[string.index(start)+1:string.index(stop)]
+# METADATA FUNCTION
+def meta(x):
+    with open ('../meta.csv') as f:
+        data=list(csv.reader(f))
+        return (data[1][x]) 
 
 # GETTING DATA
 os.system("python separate.py")
 
 # METADATA
-documentstyle = "ieeeconf" # change for meta.csv
-author = "Spandan Anupam" # change for meta.csv
-title = "Test"
+data=list(csv.reader("../meta.csv"))
+documentstyle = meta(2) # change for meta.csv
+author = meta(0) # change for meta.csv
+title = meta(3)
 
 # MAKE FILE, CODE and CSV LISTS
 source_csv = []

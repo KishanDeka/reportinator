@@ -3,72 +3,52 @@ abc blah blah
 %%
 # 1Objective:
 The objectives of this two part disjoint experiment series will be to:
-
 - Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
 - Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
 %%
 # 2Theory:
 ## Electron Spin Resonance:
 Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. These being spin half paricles, we will either have the electron aligning parallel ($m_s = 1/2$) or antiparallel ($m_s = -1/2$) to the field. The energy assigned is given by:
-\begin{equation}
-	E = m_s g_e \mu_B B_0
-\end{equation}
+$$ E = m_s g_e \mu_B B_0 $$
 where:
-\newline E refers to the energy
-\newline $m_s$ refers to the magneitc component of the spin
-\newline $g_e$ refers to the lande g factor
-\newline $\mu_B$ refers to a Bohr magneton
-\newline and $B_0$ is the applied magnetic field
-Now an electron can of course move between these two states by absorbing or emmiting a photon, with energy $h\nu$. So we get another equation from here:
-\begin{equation}
-	h\nu=m_s g_e \mu_B B_0
-\end{equation}
-where:
-\newline $\nu$ is the wavenumber of the exciting RF wave.
+E refers to the energy  
+$m_s$ refers to the magnetic component of the spin  
+$g_e$ refers to the landé g factor  
+$\mu_B$ refers to a Bohr magneton  
+and $B_0$ is the applied magnetic field  
+Now an electron can of course move between these two states by absorbing or emmiting a photon, with energy $h\nu$. So we get another equation from here:  
+$$ h\nu=m_s g_e \mu_B B_0 $$
+where:  
+$\nu$ is the wavenumber of the exciting RF wave.  
 For our case, we are keeping the frequency of the RF wave constant, and changing the magnetic field. We will, at some point, reach an energy where the energy is absorbed the most, due to the transiton. We are assuming here that most of the electrons are in the lower energy level, in a normal case.
 
 We here, are attenuating a DC voltage through the coil with a small 50 Hz AC voltage, so that the magnetic field sweeps from $I_{DC}$-$I_{AC max}$ to $I_{DC}$+$I_{AC max}$. This will contain the absorbance energy.
 
-\begin{equation}
-H_0 = \frac{2\sqrt{2}H}{P}Q
-\end{equation}
-\begin{equation}\label{key}
-H=\frac{32\pi n}{10\sqrt{125}a}I
-\end{equation}
-\begin{equation}\label{key}
-H_0=2\sqrt{2}\frac{32\pi n}{10\sqrt{125}a}\frac{QI}{P}
-\end{equation}
+$$ H_0 = \frac{2\sqrt{2}H}{P}Q $$
+$$ H=\frac{32\pi n}{10\sqrt{125}a}I $$
+$$ H_0=2\sqrt{2}\frac{32\pi n}{10\sqrt{125}a}\frac{QI}{P} $$
 Substituting the value of a = 7.6 cm, n = 500 turns we get
 
-\begin{equation}\label{key}
-Q=\frac{10\sqrt{125}a PH_0}{64\sqrt{2}\pi n }\frac{1}{I}=\frac{PH_0}{168}\frac{1}{I} 
-\end{equation}
+$$ Q=\frac{10\sqrt{125}a PH_0}{64\sqrt{2}\pi n }\frac{1}{I}=\frac{PH_0}{168}\frac{1}{I} $$ {#eq:desc}
 From the plot of Q Vs 1/I , the slope gives : 
-\begin{equation}\label{key}
-	\frac{PH_0}{168}=slope \implies H_0=slope \times \frac{168}{P}
-\end{equation}
-\begin{equation}\label{eq}
-g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope}
-\end{equation}
+$$ \frac{PH_0}{168}=slope \implies H_0=slope \times \frac{168}{P} $$
+$$ g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope} $$
 
 ## ExpEyes:
-This is basically an interface which changes the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familatrisation of oneself with the instruments.
+This is basically an interface which changes the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
 
 ## Electromagnetic Induction:
-Electromagentic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
-\begin{align}
-	EMF = &\frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \\ \nonumber
-	&\times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt
-\end{align}
-where:
-\newline EMF is the induced voltage
-\newline $m$ refers to the magentic moment of the small magnet
-\newline g is the acceleration due to gravity
-\newline $\mu_o$ refers to a permittivity of free space
-\newline t is the time
-\newline R is the radius of the coil
-\newline N is the number of turns
-\newline $z_o$ is the height from which the magnet is dropped
+Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
+$$ EMF = \frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt $$
+where:  
+EMF is the induced voltage  
+$m$ refers to the magentic moment of the small magnet  
+g is the acceleration due to gravity  
+$\mu_o$ refers to a permittivity of free space  
+t is the time  
+R is the radius of the coil  
+N is the number of turns  
+$z_o$ is the height from which the magnet is dropped  
 Our job here, will be to calculate the magnetic moment of the small magnet by fitting the experimental data as close to the theoretical data. We will of course, have som deviations considering that the magnet does not stay straight at all times, there is air resistance, and many other factors that we considered. I took the liberty of matching the ``0s'' of the graphs and callibrating the digital data by hand, and not including it in the data listed.
 \subsubsection{Induced Voltage in a photodiode:}
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
