@@ -11,8 +11,8 @@ with open("../input.md", "r") as f:
     buff = []
     i = 1
     for line in f:
-        if line.strip():  #skips the empty lines
-           buff.append(line)
+        #if line.strip():  #skips the empty lines
+        buff.append(line)
         if line.strip() == "%%":
            output = open('../_assets/process/%d.txt' % i,'w')
            output.write(''.join(buff))
