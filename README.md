@@ -1,64 +1,42 @@
-# Reportinator
-Aim: To make and mail beautiful reports written in latex, with the help of `tably` and some hand written code.
+# Aim of the Project:
+To make LaTeX reports easily from markdowns, containing the section data and marked CSVs. Current implementation spits out the LaTeX code into `stdout`.
 
-## Usage:
-This project is still under construction, and will take some days to get to its full functional capacity. 
-Almost all of the python scripts are done, and will be up in a few days. The current implementation calls for the text to be written in `_assets/input.txt.`
-There is a specific format for the text to be written, that looks something like this:
-
+## Dependencies:
+For the sake of this project, these packages/programs have to be installed:
+* Python 3+
+* Pandoc
+* Pandoc-Eqnos
 ```shell
-1Abstract:
-abc
-;
-2Introduction:
-def
-;
-3Observations:
-ghi
-;
-4Graphs:
-jkl
-;
-5Conclusion:
-asfasf
-;
+pip install pandoc-eqnos
 ```
-If you do have csv files in `_assets/csvs`, then you will have your tables tabled and graphs plotted. For plotting graphs, you need one line at the end of the csv file:
 
-```shell
-graph(x,y,x,y,x,y..)
+## Input Markdown:
+The input markdown takes everything into LaTeX with the help of `pandoc`. Due to this, there are certain rules that have to be followed to prevent errors in the final output.
+For recognizing multiple subsections, or lists with a text above them, it is necessary that you leave a one line gap between each subsection, or before the list.
+
+### Equations:
+For putting in equations, you must type:
+```markdown
+$$ your-equation $$ {#eq:tag}
 ```
-Where x and y are the X,Y columns for the graph plotting. Fitting capabilities are to be added soon.
+For referencing them anywhere inside the text, you just need to type @eq:tag or {@eq:tag} at the appropriate place.
+More: [pandoc-eqnos]('https://github.com/tomduck/pandoc-eqnos')
 
-Right now, the help section of `figures.py` is active. It can be turned on by:
-```shell
-cd download_dir/reportinator/_scripts/
-python figures.py --help
+### Images:
+Example for inserting images into the markdown:
+```markdown
+![la lune](lalune.jpg "Voyage to the moon")
 ```
-The actual help section for lazybums:
-```console
-usage: figures.py [-h] --file FILE -x X -y Y
+### Tables:
+Tables are made from csvs placed in `_assets/csvs/`. All the csv files placed here will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns.
 
-Program for plotting and fitting figures for LaTex reportinator 1.0
-
-optional arguments:
-  -h, --help   show this help message and exit
-  --file FILE  Input the name of the csv file to be converted into a figure, placed in assets
-  -x X         Input the column number for x
-  -y Y         Input the column number for y
+### Graphs:
+Graphs are made from csv files placed in `_assets/csvs/`. These are triggered by a graph statement at the end of the csvfile. They need to be in the first cell of the last row of the csvfile in a specific format.
 ```
-### Assets:
-Will contain all the text files, containing the individual text blocks for the actual content, and the CSV files of the data taken.
+graph(x,y,x,y..)
+```
+Where x,y pairs are column pairs that need to be plotted. Without this tag at the end of the csv, the table will only be passed as a table, and not into graphs.
 
-### Layouts:
-Will contain the latex templates which can be used for different purposes
 
-### Scripts:
-Will contain whatever there is, running the program.
 
-Ideally, the final program should run automatically if we just put in data into a config file saying what graphs you need, and what columns the data is in. The program should just spit out the PDF file into the designated folder for each experiment.
 
-## To Do List:
-- Completion and adaption of tably by [narimiran](https://github.com/narimiran/tably)
-- Fit functions
-- Make it cooler, somehow
