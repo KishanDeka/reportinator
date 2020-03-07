@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1583585868 "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf" "report" 1583585868
-  "/Users/spandan/Documents/Git/reportinator/tex_out/report.aux" 1583585868 8 a94a2480d3289e625eea47cd1b285758 ""
+["pdflatex"] 1583585983 "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf" "report" 1583585982
+  "/Users/spandan/Documents/Git/reportinator/tex_out/report.aux" 1583585982 8 a94a2480d3289e625eea47cd1b285758 ""
   "/Users/spandan/Documents/Git/reportinator/tex_out/report.tex" 1583585710 6727 c8497c8de0fb504c79529032a01516ec ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -41,8 +41,8 @@
   "report.aux" 0 -1 0 ""
   "report.tex" 1583585710 6727 c8497c8de0fb504c79529032a01516ec ""
   (generated)
-  "report.aux"
-  "report.pdf"
-  "/Users/spandan/Documents/Git/reportinator/tex_out/report.log"
   "report.log"
   "/Users/spandan/Documents/Git/reportinator/tex_out/report.pdf"
+  "report.aux"
+  "/Users/spandan/Documents/Git/reportinator/tex_out/report.log"
+  "report.pdf"
