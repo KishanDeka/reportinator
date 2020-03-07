@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import argparse
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-whitegrid')
 
 
 # parser
@@ -33,18 +33,16 @@ def plot(x_name, y_name, data):
     f = plt.figure()
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
-    plt.plot (x,y,'bo', label="Observed Data")
-    xin = "r'"+x_name+"'"
-    yin = "r'"+y_name+"'"
-    plt.xlabel(r'%s' % x_name,fontsize = 11)
-    plt.ylabel(r'%s'% y_name,fontsize = 11)
+    plt.plot (x,y,'o', label="Observed Data")
+    plt.xlabel(r'%s' % x_name,fontsize = 13)
+    plt.ylabel(r'%s'% y_name,fontsize = 13)
     plt.legend()
     f.savefig("../_assets/"+y_name.split(" ")[0]+".pdf", bbox_inches = 'tight')
     return y_name
 
 def pregraph(name):
     location = "../_assets/"+name.split(" ")[0]+".pdf"
-    print ('\\begin{figure}[H]'+'\n'+'\centering'+'\n'+'\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n' +'\end{figure}')
+    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n' +'\end{figure}')
     return 0
 # def fit():
 #     if fun == "expo":

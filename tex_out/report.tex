@@ -31,7 +31,7 @@ E refers to the energy\\
 and \(B_0\) is the applied magnetic field\\
 Now an electron can of course move between these two states by absorbing or emmiting a photon, with energy \(h\nu\). So we get another equation from here:\\
 \[ h\nu=m_s g_e \mu_B B_0 \]
-where:
+where:\\
 \(\nu\) is the wavenumber of the exciting RF wave.\\
 For our case, we are keeping the frequency of the RF wave constant, and changing the magnetic field. We will, at some point, reach an energy where the energy is absorbed the most, due to the transiton. We are assuming here that most of the electrons are in the lower energy level, in a normal case.
 We here, are attenuating a DC voltage through the coil with a small 50 Hz AC voltage, so that the magnetic field sweeps from \(I_{DC}\)-\(I_{AC max}\) to \(I_{DC}\)+\(I_{AC max}\). This will contain the absorbance energy.
@@ -48,7 +48,7 @@ This is basically an interface which changes the analog signals we get, into dig
 \#\# Electromagnetic Induction:
 Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
 \[ EMF = \frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt \]
-where:
+where:\\
 EMF is the induced voltage\\
 \(m\) refers to the magentic moment of the small magnet\\
 g is the acceleration due to gravity\\
@@ -58,9 +58,7 @@ R is the radius of the coil\\
 N is the number of turns\\
 \(z_o\) is the height from which the magnet is dropped\\
 Our job here, will be to calculate the magnetic moment of the small magnet by fitting the experimental data as close to the theoretical data. We will of course, have som deviations considering that the magnet does not stay straight at all times, there is air resistance, and many other factors that we considered. I took the liberty of matching the ``0s'\,' of the graphs and callibrating the digital data by hand, and not including it in the data listed.
-
-\subsubsection{Induced Voltage in a photodiode:}
-
+\#\# Induced Voltage in a photodiode:
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
 
 \section{Observations:}
@@ -68,7 +66,7 @@ This is relatively simple, we just need to observe what the voltage from the inp
     \centering
     \begin{tabular}{@{}cccc@{}}
         \toprule
-        ﻿Temperature (C) & Temperature (K) & Capacitance (nF) & \epsilon \\
+        ﻿Temperature (C) & Temperature (K) & Capacitance (nF) & $\epsilon$ \\
         \midrule
         23.5 & 296.5 & 635 & 4.04E-09 \\
         51 & 324 & 644 & 4.10E-09 \\

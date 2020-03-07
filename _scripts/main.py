@@ -40,7 +40,7 @@ print ("\\begin{"+"document}\n")
 print ("\\title{"+title+"}\n")
 print ("\\author{"+author+"}\n")
 print ("\\date{"+"\\today"+"}")
-print ("\maketitle\n")
+print ("\\maketitle\n")
 
 for file in file_list:
     ## We have the file[1:] to account for naming as 1Abc. The ordering is set by the numbering in front.

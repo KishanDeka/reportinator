@@ -669,11 +669,14 @@
 \usepackage{times}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{textcomp}
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage[table,xcdraw]{xcolor}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 % define new needed flags to indicate document options
 % and set a few "failsafe" defaults
 \newif\if@twocolumnmode      \global\@twocolumnmodetrue
