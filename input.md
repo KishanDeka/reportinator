@@ -2,7 +2,8 @@
 abc blah blah
 %%
 # 1Objective:
-The objectives of this two part disjoint experiment series will be to:
+The objectives of this two part disjoint experiment series will be to:  
+
 - Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
 - Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
 %%
@@ -33,8 +34,10 @@ $$ Q=\frac{10\sqrt{125}a PH_0}{64\sqrt{2}\pi n }\frac{1}{I}=\frac{PH_0}{168}\fra
 From the plot of Q Vs 1/I , the slope gives : 
 $$ \frac{PH_0}{168}=slope \implies H_0=slope \times \frac{168}{P} $$
 $$ g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope} $$
+
 ## ExpEyes:
 This is basically an interface which changes the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
+
 ## Electromagnetic Induction:
 Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
 $$ EMF = \frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt $$
@@ -48,6 +51,7 @@ R is the radius of the coil
 N is the number of turns  
 $z_o$ is the height from which the magnet is dropped  
 Our job here, will be to calculate the magnetic moment of the small magnet by fitting the experimental data as close to the theoretical data. We will of course, have som deviations considering that the magnet does not stay straight at all times, there is air resistance, and many other factors that we considered. I took the liberty of matching the ``0s'' of the graphs and callibrating the digital data by hand, and not including it in the data listed.
+
 ## Induced Voltage in a photodiode:
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
 %%
