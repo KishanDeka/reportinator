@@ -1,5 +1,7 @@
-import csv
+import os
+import sys
 
-with open ('../meta.csv') as f:
-    data=list(csv.reader(f))
-    print (data[1][0])
+def get_script_path():
+    print (os.path.dirname(os.path.realpath(sys.argv[0])))
+
+get_script_path()

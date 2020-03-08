@@ -2,10 +2,28 @@
 import os
 import pandas as pd
 import csv
+import argparse
+import shutil
+import sys
+
+# Change working directory
+script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
+os.chdir(script)
+
+# Clean
+shutil.rmtree("../tex_out", ignore_errors=True, onerror=None)
+os.mkdir("../tex_out")
+
+# Source Directory
+parser = argparse.ArgumentParser(description='Welcome to Reportinator 1.0')
+parser.add_argument('--source', required=True, help="Directory path of the source files, without / at the end")
+args = parser.parse_args()
+path = args.source
 
 # EXTRACT FUNCTION
 def extract(string, start='(', stop=')'):
     return string[string.index(start)+1:string.index(stop)]
+
 # METADATA FUNCTION
 def meta(x):
     with open ('../meta.csv') as f:
@@ -13,7 +31,7 @@ def meta(x):
         return (data[1][x]) 
 
 # GETTING DATA
-os.system("python separate.py")
+os.system("python3 separate.py --file "+path)
 
 # METADATA
 data=list(csv.reader("../meta.csv"))
@@ -60,7 +78,7 @@ for file in file_list:
         print ("\\section{"+name+"}")
         for source in source_csv:
             if source != ".DS_Store":
-                os.system("python tably.py ../_assets/csvs/" + source)    
+                os.system("python3 tably.py ../_assets/csvs/" + source)    
             # figure out exactly
     elif file[1:] == "DS_Store":
         pass
@@ -92,7 +110,7 @@ for file in file_list:
                         #fitfun = fit_list[i]
                         X = graph_list[i]
                         Y = graph_list[i+1]
-                        figure = "python figures.py --file ../_assets/csvs/"+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
+                        figure = "python3 figures.py --file ../_assets/csvs/"+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
                         os.system(figure)
                         i+=2
             
@@ -104,6 +122,6 @@ for file in file_list:
         file_contents = f.read()
         print (file_contents)
         if (file[1:]+".py" in code_list):
-            code = "python"+file[1:]+".py"
+            code = "python3"+file[1:]+".py"
             os.system(code)
 print ("\\end{document"+"}")

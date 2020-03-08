@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import argparse
 
-plt.style.use('seaborn-whitegrid')
+plt.style.use('seaborn-ticks')
 
 
 # parser
@@ -16,7 +16,7 @@ parser.add_argument('-y', required=True, help="Input the column number for y")
 args = parser.parse_args()
 
 #inputs and initializations
-in_file = f'../_assets/{args.file}'
+in_file = "../_assets/"+args.file
 x_index = int(args.x) - 1
 y_index = int(args.y) - 1
 data = pd.read_csv(in_file)
@@ -33,7 +33,7 @@ def plot(x_name, y_name, data):
     f = plt.figure()
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
-    plt.plot (x,y,'o', label="Observed Data")
+    plt.plot (x,y,linestyle = "dashed", marker = "o", label="Observed Data")
     plt.xlabel(r'%s' % x_name,fontsize = 13)
     plt.ylabel(r'%s'% y_name,fontsize = 13)
     plt.legend()
