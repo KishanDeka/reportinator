@@ -50,7 +50,7 @@ The input markdown takes everything into LaTeX with the help of `pandoc`. Due to
 Recommended use: Typora, as a markdown editor, otherwise:
 
 For recognizing multiple subsections, or lists with a text above them, it is necessary that you leave a one line gap between each subsection, or before the list. There is an example loaded in the current repo, which may be referred to, initially.
-**Tables and Graphs will only be plotted only if the program sees the appropriate section headings.**
+**Tables and Graphs will only be plotted only if the program sees the appropriate section headings.** If you are leaving some section like graphs blank, and want to only fill it up with python graphs, you need to leave one blank line in the section. That is, you must have atleast one line in each section, even if it is blank.
 
 ### Equations:
 For putting in equations, you must type:
