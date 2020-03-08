@@ -46,7 +46,8 @@ with open("../input.md", "r") as f:
     for line in f:
         #if line.strip():  #skips the empty lines
         buff.append(line)
-        if line.strip() == "%%":
+        stripped = line.strip()
+        if stripped == "%%":
            output = open('../_assets/process/%d.txt' % i,'w')
            output.write(''.join(buff))
            output.close()
@@ -56,12 +57,13 @@ with open("../input.md", "r") as f:
 # Rename and remove
 for file in os.listdir("../_assets/process"):
     with open ("../_assets/process/"+file, 'r') as f:
+        num = str(file[:-4])
         data = f.read().splitlines(True)
         data = data[:-1]
         firstline = data[0]
         lastline = data[-1]
         title = firstline[2:-1]
-        title = "../_assets/texts/"+title
+        title = "../_assets/texts/"+num+title
     with open(title, 'w') as fout:
         fout.writelines(data[1:])
 

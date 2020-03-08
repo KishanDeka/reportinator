@@ -1,20 +1,20 @@
-# 0Abstract:
+# Abstract:
 Dick
 %%
-# 1Objective:
+# Objective:
 The objectives of this two part disjoint experiment series will be to:  
 
 - Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
 - Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
 %%
-# 2Theory:
+# Theory:
 ## Electron Spin Resonance:
 Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. 
 image(image.png)
 These being spin half paricles, we will either have the electron aligning parallel ($m_s = 1/2$) or antiparallel ($m_s = -1/2$) to the field. The energy assigned is given by:
 $$ E = m_s g_e \mu_B B_0 $$
 where:
-E refers to the energy  
+E refers to the energy   
 $m_s$ refers to the magnetic component of the spin  
 $g_e$ refers to the landé g factor  
 $\mu_B$ refers to a Bohr magneton  
@@ -40,6 +40,8 @@ $$ g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope} $$
 ## ExpEyes:
 This is basically an interface which changes the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
 
+image(image.png)
+
 ## Electromagnetic Induction:
 Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
 $$ EMF = \frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt $$
@@ -57,17 +59,17 @@ Our job here, will be to calculate the magnetic moment of the small magnet by fi
 ## Induced Voltage in a photodiode:
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
 %%
-# 3Observations:
+# Observations:
 %%
-# 4Graphs:
+# Graphs:
 %%
-# 5Conclusion:
+# Conclusion:
 We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m$^2$. Substituting: P = 5, $\nu = 14.37 \times 10^6 Hz$ and slope = 0.195 in eq \ref{eq} we also get $g = 1.565$, which is pretty close to it's actual value.
 %%
-# 6Precautions:
+# Precautions:
 - Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
 - The magnet must be dropped as vertically as possible
 %%
-# 7References:
+# References:
 Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319–325.
 %%
