@@ -29,7 +29,7 @@ def image(source):
     with open(source, "r") as f:
         for line in f:
             content = line.strip()
-            if content[6:] == "image(":
+            if content[:6] == "image(":
                 file = content[content.index('(')+1:content.index(')')]
                 os.system("python3 image.py --file "+file)    
             else:

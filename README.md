@@ -56,7 +56,7 @@ More: [pandoc-eqnos]('https://github.com/tomduck/pandoc-eqnos')
 ### Images:
 Example for inserting images into the markdown:
 ```markdown
-![la lune](lalune.jpg "Voyage to the moon")
+image(name.png)
 ```
 ### Tables:
 Tables are made from csvs placed in `_assets/csvs/`. All the csv files placed here will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns.
