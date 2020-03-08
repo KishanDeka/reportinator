@@ -10,17 +10,19 @@ git clone "https://github.com/spandananupam/reportinator"
 ## Basic Usage:
 You can edit the basic configurations in `meta.csv`. The whole code is activated in `_scripts/` by:
 ```shell
-python main.py
+python main.py --source path/to/source/directory
 ```
 
 ## Dependencies:
 For the sake of this project, these packages/programs have to be installed:
-* Python 3 onwards
-* Pandoc
+* Python 3.7 onwards
+* LaTeX
+* Pandoc (To be installed through the pandoc website, not through pip pypandoc as of now, on all platforms)
 * Pandoc-Eqnos
 ```shell
 pip install pandoc-eqnos
 ```
+* shutil
 If there are any problems, please check if your python versions are correct.
 
 ## File Structure:
@@ -42,8 +44,10 @@ If there are any problems, please check if your python versions are correct.
 
 ## Input Markdown:
 The input markdown takes everything into LaTeX with the help of `pandoc`. Due to this, there are certain rules that have to be followed to prevent errors in the final output.
-For recognizing multiple subsections, or lists with a text above them, it is necessary that you leave a one line gap between each subsection, or before the list.
-**The headings also have to be in a specific format, where all the section headings are numbered, like 1Abstract, 2Introduction etc. Tables and Graphs will only be plotted only if the program sees the appropriate section headings.**
+Recommended use: Typora, as a markdown editor, otherwise:
+
+For recognizing multiple subsections, or lists with a text above them, it is necessary that you leave a one line gap between each subsection, or before the list. There is an example loaded in the current repo, which may be referred to, initially.
+**Tables and Graphs will only be plotted only if the program sees the appropriate section headings.**
 
 ### Equations:
 For putting in equations, you must type:
