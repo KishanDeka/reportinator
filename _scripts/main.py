@@ -24,6 +24,17 @@ path = args.source
 def extract(string, start='(', stop=')'):
     return string[string.index(start)+1:string.index(stop)]
 
+# INCLUDE IMAGE FUNCTION
+def image(source):
+    with open(source, "r") as f:
+        for line in f:
+            content = line.strip()
+            if content[6:] == "image(":
+                file = content[content.index('(')+1:content.index(')')]
+                os.system("python3 image.py --file "+file)    
+            else:
+                print (content)
+
 # METADATA FUNCTION
 def meta(x):
     with open ('../meta.csv') as f:
@@ -118,9 +129,8 @@ for file in file_list:
     else:
         name = file[1:]
         print ("\\section{"+name+"}")
-        f = open("../_assets/texts/"+file, 'r')
-        file_contents = f.read()
-        print (file_contents)
+        path = "../_assets/texts/"+file
+        image(path)
         if (file[1:]+".py" in code_list):
             code = "python3"+file[1:]+".py"
             os.system(code)

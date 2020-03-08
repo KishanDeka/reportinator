@@ -9,7 +9,9 @@ The objectives of this two part disjoint experiment series will be to:
 %%
 # 2Theory:
 ## Electron Spin Resonance:
-Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. These being spin half paricles, we will either have the electron aligning parallel ($m_s = 1/2$) or antiparallel ($m_s = -1/2$) to the field. The energy assigned is given by:
+Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. 
+image(image.png)
+These being spin half paricles, we will either have the electron aligning parallel ($m_s = 1/2$) or antiparallel ($m_s = -1/2$) to the field. The energy assigned is given by:
 $$ E = m_s g_e \mu_B B_0 $$
 where:
 E refers to the energy  
