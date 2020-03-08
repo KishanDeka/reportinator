@@ -3,6 +3,7 @@ import csv
 import pandas as pd
 import shutil
 import argparse
+import pypandoc
 
 # Parse source
 parser = argparse.ArgumentParser(description='Program for processing text and assets for reportinator 1.0')
@@ -68,8 +69,13 @@ for file in os.listdir("../_assets/process"):
         fout.writelines(data[1:])
 
 for file in os.listdir("../_assets/texts"):
+    filters = ['pandoc-eqnos']
+    pdoc_args = ['--wrap=preserve']
     shutil.copy("../_assets/texts/"+file, "../_assets/texts/"+file+".md")
-    os.system("pandoc -f markdown-auto_identifiers --filter pandoc-eqnos --wrap=preserve -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
+    output = pypandoc.convert_file("../_assets/texts/"+file+".md", to='latex', format='markdown-auto_identifiers' ,outputfile="../_assets/texts/"+file+".tex", extra_args=pdoc_args,
+                         filters=filters)
+    assert output == ""
+    #os.system("pandoc -f markdown-auto_identifiers --filter pandoc-eqnos --wrap=preserve -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
     os.remove("../_assets/texts/"+file+".md")
     shutil.copy("../_assets/texts/"+file+".tex", "../_assets/texts/"+file)
     os.remove("../_assets/texts/"+file+".tex")
