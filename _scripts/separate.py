@@ -42,25 +42,48 @@ for file in os.listdir(source):
 
 # Separate into numbers
 with open("../input.md", "r") as f:
-    buff = []
-    i = 1
-    for line in f:
-        #if line.strip():  #skips the empty lines
-        buff.append(line)
+    head = []
+    k = 1
+    for lane in f:
+        stripped = lane.strip()
+        if stripped[:2] == "# ":
+            head.append(lane)     
+            k += 1
+   
+        else:
+            pass
+
+with open("../input.md", "r") as g:
+    buff = [] 
+    i = 0
+    for line in g:
         stripped = line.strip()
-        if stripped == "%%":
-           output = open('../_assets/process/%d.txt' % i,'w')
-           output.write(''.join(buff))
-           output.close()
-           i+=1
-           buff = [] #buffer reset
+        if stripped[:2] != "# ":
+            buff.append(line)
+            output = open('../_assets/process/%d.txt' % i,'w')
+            output.write(''.join(buff))
+            output.close()
+        else:
+            i += 1
+            buff = []
+
+i = 1
+while i < len(head) + 1:
+    filename = "../_assets/process/%d.txt" % i
+    append_copy = open(filename, "r")
+    original_text = append_copy.read()
+    append_copy.close()
+    append_copy = open(filename, "w")
+    append_copy.write(head[i-1])
+    append_copy.write(original_text)
+    append_copy.close()
+    i += 1
 
 # Rename and remove
 for file in os.listdir("../_assets/process"):
     with open ("../_assets/process/"+file, 'r') as f:
         num = str(file[:-4])
         data = f.read().splitlines(True)
-        data = data[:-1]
         firstline = data[0]
         lastline = data[-1]
         title = firstline[2:-1]

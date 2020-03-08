@@ -1,7 +1,38 @@
+\documentclass{../_layouts/ieeeconf}
+
+\begin{document}
+
+\title{Electron Spin Resonance and Expeyes}
+
+\author{Spandan Anupam}
+
+\date{\today}
+\maketitle
+
+\begin{abstract}
+Dick
+
+\end{abstract}
+\section{Objective:}
+The objectives of this two part disjoint experiment series will be to:
+
+\begin{itemize}
+\tightlist
+\item
+Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
+\item
+Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
+\end{itemize}
+\section{Theory:}
 \subsection{Electron Spin Resonance:}
 
 Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field.
-image(image.png)
+\begin{figure}[H]
+\centering
+\includegraphics[width = \columnwidth]{../_assets/image.png}
+\caption{image}
+\label{fig:image}
+\end{figure}
 These being spin half paricles, we will either have the electron aligning parallel (\(m_s = 1/2\)) or antiparallel (\(m_s = -1/2\)) to the field. The energy assigned is given by:
 \[ E = m_s g_e \mu_B B_0 \]
 where:
@@ -32,7 +63,12 @@ From the plot of Q Vs 1/I , the slope gives :
 
 This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
 
-image(image.png)
+\begin{figure}[H]
+\centering
+\includegraphics[width = \columnwidth]{../_assets/image.png}
+\caption{image}
+\label{fig:image}
+\end{figure}
 
 \subsection{Electromagnetic Induction:}
 
@@ -52,3 +88,55 @@ Our job here, will be to calculate the magnetic moment of the small magnet by fi
 \subsection{Induced Voltage in a photodiode:}
 
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
+\section{Observations:}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}cccc@{}}
+        \toprule
+        Temperature (C) & Temperature (K) & Capacitance (nF) & \epsilon \\
+        \midrule
+        23.5 & 296.5 & 635 & 4.04E-09 \\
+        51 & 324 & 644 & 4.10E-09 \\
+        56 & 329 & 650 & 4.14E-09 \\
+        60 & 333 & 657 & 4.18E-09 \\
+        65 & 338 & 658 & 4.19E-09 \\
+        70 & 343 & 673 & 4.29E-09 \\
+        75 & 348 & 695 & 4.43E-09 \\
+        80 & 353 & 726 & 4.62E-09 \\
+        85 & 358 & 767 & 4.89E-09 \\
+        90 & 363 & 820 & 5.22E-09 \\
+        95 & 368 & 905 & 5.76E-09 \\
+        100 & 373 & 1020 & 6.50E-09 \\
+        105 & 378 & 1120 & 7.13E-09 \\
+        110 & 383 & 1100 & 7.01E-09 \\
+        112 & 385 & 1050 & 6.69E-09 \\
+        113 & 386 & 1028 & 6.55E-09 \\
+        114 & 387 & 1000 & 6.37E-09 \\
+        115 & 388 & 980 & 6.24E-09 \\
+        116 & 389 & 958 & 6.10E-09 \\
+        117 & 390 & 933 & 5.94E-09 \\
+        118 & 391 & 910 & 5.80E-09 \\
+        119 & 392 & 889 & 5.66E-09 \\
+        120 & 393 & 870 & 5.54E-09 \\
+        graph(2,3) &  &  &  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\section{Graphs:}
+\begin{figure}[H]
+\centering
+\includegraphics[width = \columnwidth]{../_assets/Capacitance.pdf}
+\end{figure}
+\section{Conclusion:}
+We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m\(^2\). Substituting: P = 5, \(\nu = 14.37 \times 10^6 Hz\) and slope = 0.195 in eq \ref{eq} we also get \(g = 1.565\), which is pretty close to it's actual value.
+\section{Precautions:}
+\begin{itemize}
+\tightlist
+\item
+Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
+\item
+The magnet must be dropped as vertically as possible
+\end{itemize}
+\section{References:}
+Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319--325.
+\end{document}
