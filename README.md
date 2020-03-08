@@ -16,7 +16,10 @@ python main.py --source path/to/source/directory
 For the sake of this project, these packages/programs have to be installed:
 * Python 3.7 onwards
 * LaTeX
-* Pandoc (To be installed through the pandoc website, not through pip pypandoc as of now, on all platforms)
+* Pandoc (Install both the pypandoc and pandoc for your machine)
+```shell
+pip install pypandoc && pip3 install pypandoc
+```
 * Pandoc-Eqnos
 ```shell
 pip install pandoc-eqnos
