@@ -1,8 +1,7 @@
 # Aim of the Project:
 To make LaTeX reports easily from markdowns, containing the section data and marked CSVs. Current implementation spits out the LaTeX code into `stdout`. **!! This project is in no way complete in its current state, please do not expect a lot !!**. I am working on making this project cross platform, it will soon be. Please look around first, before doing anything.
 
-##
-Clone this repository:
+## Clone this repository:
 ```shell
 git clone "https://github.com/spandananupam/reportinator"
 ```
@@ -23,6 +22,7 @@ For the sake of this project, these packages/programs have to be installed:
 pip install pandoc-eqnos
 ```
 * shutil
+
 If there are any problems, please check if your python versions are correct.
 
 ## File Structure:
