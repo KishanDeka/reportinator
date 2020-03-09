@@ -43,7 +43,7 @@ If there are any problems, please check if your python versions are correct.
 `tex_out` is supposed to be the processing place for everything .tex.
 
 ## Input Markdown:
-The name of the input markdown is the title of the report.
+The name of the input markdown is the title of the report. Please do not use ":" at the end of your main headings.
 
 The input markdown takes everything into LaTeX with the help of `pandoc`. Due to this, there are certain rules that have to be followed to prevent errors in the final output.
 Recommended use: Typora, as a markdown editor, otherwise:
