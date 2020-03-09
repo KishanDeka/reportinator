@@ -92,7 +92,7 @@ for file in os.listdir("../_assets/process"):
         fout.writelines(data[1:])
 
 for file in os.listdir("../_assets/texts"):
-    filters = ['pandoc-eqnos']
+    filters = ['pandoc-xnos']
     pdoc_args = ['--wrap=preserve']
     shutil.copy("../_assets/texts/"+file, "../_assets/texts/"+file+".md")
     output = pypandoc.convert_file("../_assets/texts/"+file+".md", to='latex', format='markdown-auto_identifiers' ,outputfile="../_assets/texts/"+file+".tex", extra_args=pdoc_args,

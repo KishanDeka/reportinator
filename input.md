@@ -37,9 +37,7 @@ $$ \frac{PH_0}{168}=slope \implies H_0=slope \times \frac{168}{P} $$
 $$ g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope} $$
 
 ## ExpEyes:
-This is basically an interface which changes {@eq:desc} the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
-
-image(image.png)
+This is basically an interface which changes {@eq:desc} the analog signals we get, into digital. The "digital oscilloscope" gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments. {@fig:image} {@fig:alpha} {@tbl:alpha}
 
 ## Electromagnetic Induction:
 Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
@@ -67,7 +65,7 @@ This is relatively simple, we just need to observe what the voltage from the inp
 
 
 # Conclusion:
-We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m$^2$. Substituting: P = 5, $\nu = 14.37 \times 10^6 Hz$ and slope = 0.195 in eq \ref{eq} we also get $g = 1.565$, which is pretty close to it's actual value.
+We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m$^2$. Substituting: P = 5, $\nu = 14.37 \times 10^6 Hz$ and slope = 0.195 in we also get $g = 1.565$, which is pretty close to it's actual value.
 
 # Precautions:
 - Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR

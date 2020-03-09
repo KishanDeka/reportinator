@@ -1,4 +1,4 @@
-Temperature (C),Temperature (K),Capacitance (nF),\epsilon
+Temperature (C),Temperature (K),Capacitance (nF),$\epsilon$
 23.5,296.5,635,4.04E-09
 51,324,644,4.10E-09
 56,329,650,4.14E-09

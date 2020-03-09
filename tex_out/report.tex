@@ -31,7 +31,7 @@ Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is 
 \centering
 \includegraphics[width = \columnwidth]{../_assets/image.png}
 \caption{image}
-\label{fig:image}
+\label{"fig:image"}
 \end{figure}
 These being spin half paricles, we will either have the electron aligning parallel (\(m_s = 1/2\)) or antiparallel (\(m_s = -1/2\)) to the field. The energy assigned is given by:
 \[ E = m_s g_e \mu_B B_0 \]
@@ -61,14 +61,7 @@ From the plot of Q Vs 1/I , the slope gives :
 
 \subsection{ExpEyes:}
 
-This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = \columnwidth]{../_assets/image.png}
-\caption{image}
-\label{fig:image}
-\end{figure}
+This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments. \ref{fig:image} \ref{fig:alpha} \ref{tbl:alpha}
 
 \subsection{Electromagnetic Induction:}
 
@@ -90,45 +83,50 @@ Our job here, will be to calculate the magnetic moment of the small magnet by fi
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
 \section{Observations:}
 \begin{table}[H]
-    \centering
-    \begin{tabular}{@{}cccc@{}}
-        \toprule
-        Temperature (C) & Temperature (K) & Capacitance (nF) & \epsilon \\
-        \midrule
-        23.5 & 296.5 & 635 & 4.04E-09 \\
-        51 & 324 & 644 & 4.10E-09 \\
-        56 & 329 & 650 & 4.14E-09 \\
-        60 & 333 & 657 & 4.18E-09 \\
-        65 & 338 & 658 & 4.19E-09 \\
-        70 & 343 & 673 & 4.29E-09 \\
-        75 & 348 & 695 & 4.43E-09 \\
-        80 & 353 & 726 & 4.62E-09 \\
-        85 & 358 & 767 & 4.89E-09 \\
-        90 & 363 & 820 & 5.22E-09 \\
-        95 & 368 & 905 & 5.76E-09 \\
-        100 & 373 & 1020 & 6.50E-09 \\
-        105 & 378 & 1120 & 7.13E-09 \\
-        110 & 383 & 1100 & 7.01E-09 \\
-        112 & 385 & 1050 & 6.69E-09 \\
-        113 & 386 & 1028 & 6.55E-09 \\
-        114 & 387 & 1000 & 6.37E-09 \\
-        115 & 388 & 980 & 6.24E-09 \\
-        116 & 389 & 958 & 6.10E-09 \\
-        117 & 390 & 933 & 5.94E-09 \\
-        118 & 391 & 910 & 5.80E-09 \\
-        119 & 392 & 889 & 5.66E-09 \\
-        120 & 393 & 870 & 5.54E-09 \\
-        graph(2,3) &  &  &  \\
-        \bottomrule
-    \end{tabular}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Temperature (C) & Temperature (K) & Capacitance (nF) & $\epsilon$ \\ \hline
+\midrule
+23.5 & 296.5 & 635 & 4.04E-09 \\ \hline
+51 & 324 & 644 & 4.10E-09 \\ \hline
+56 & 329 & 650 & 4.14E-09 \\ \hline
+60 & 333 & 657 & 4.18E-09 \\ \hline
+65 & 338 & 658 & 4.19E-09 \\ \hline
+70 & 343 & 673 & 4.29E-09 \\ \hline
+75 & 348 & 695 & 4.43E-09 \\ \hline
+80 & 353 & 726 & 4.62E-09 \\ \hline
+85 & 358 & 767 & 4.89E-09 \\ \hline
+90 & 363 & 820 & 5.22E-09 \\ \hline
+95 & 368 & 905 & 5.76E-09 \\ \hline
+100 & 373 & 1020 & 6.50E-09 \\ \hline
+105 & 378 & 1120 & 7.13E-09 \\ \hline
+110 & 383 & 1100 & 7.01E-09 \\ \hline
+112 & 385 & 1050 & 6.69E-09 \\ \hline
+113 & 386 & 1028 & 6.55E-09 \\ \hline
+114 & 387 & 1000 & 6.37E-09 \\ \hline
+115 & 388 & 980 & 6.24E-09 \\ \hline
+116 & 389 & 958 & 6.10E-09 \\ \hline
+117 & 390 & 933 & 5.94E-09 \\ \hline
+118 & 391 & 910 & 5.80E-09 \\ \hline
+119 & 392 & 889 & 5.66E-09 \\ \hline
+120 & 393 & 870 & 5.54E-09 \\ \hline
+graph(2,3) &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{alpha}
+\label{"tbl:alpha"}
 \end{table}
 \section{Graphs:}
 \begin{figure}[H]
 \centering
 \includegraphics[width = \columnwidth]{../_assets/Capacitance.pdf}
+\caption{alpha}
+\label{"fig:alpha"}
 \end{figure}
 \section{Conclusion:}
-We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m\(^2\). Substituting: P = 5, \(\nu = 14.37 \times 10^6 Hz\) and slope = 0.195 in eq \ref{eq} we also get \(g = 1.565\), which is pretty close to it's actual value.
+We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m\(^2\). Substituting: P = 5, \(\nu = 14.37 \times 10^6 Hz\) and slope = 0.195 in we also get \(g = 1.565\), which is pretty close to it's actual value.
 \section{Precautions:}
 \begin{itemize}
 \tightlist
@@ -139,4 +137,5 @@ The magnet must be dropped as vertically as possible
 \end{itemize}
 \section{References:}
 Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319--325.
+\clearpage
 \end{document}

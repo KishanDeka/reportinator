@@ -71,6 +71,11 @@ print ("\\author{"+author+"}\n")
 print ("\\date{"+"\\today"+"}")
 print ("\\maketitle\n")
 
+table_header = "\\begin{"+"table"+"}[H]"+"\n"+"\\centering"+"\n"+"\\resizebox{"+"\\columnwidth"+"}{"+"!"+"}{%"+"\n"+"\\begin{"+"tabular"+"}{"+"|c|c|c|c|"+"}"+"\n"+"\\hline"
+def tab_foot(tab_caption, tab_label):
+    table_footer = "\\end{"+"tabular"+"}%"+"\n"+"}"+"\n"+"\\caption{"+tab_caption+"}"+"\n"+"\\label{\""+"tbl:"+tab_label+"\"}"+"\n"+"\\end{"+"table"+"}"
+    print (table_footer)
+
 for file in file_list:
     ## We have the file[1:] to account for naming as 1Abc. The ordering is set by the numbering in front.
     
@@ -89,7 +94,9 @@ for file in file_list:
         print ("\\section{"+name+"}")
         for source in source_csv:
             if source != ".DS_Store":
-                os.system("python3 tably.py ../_assets/csvs/" + source)    
+                print (table_header)
+                os.system("python3 tably.py -fec table ../_assets/csvs/" + source)   
+                tab_foot(source[:-4],source[:-4])
             # figure out exactly
     elif file[1:] == "DS_Store":
         pass
@@ -121,7 +128,7 @@ for file in file_list:
                         #fitfun = fit_list[i]
                         X = graph_list[i]
                         Y = graph_list[i+1]
-                        figure = "python3 figures.py --file ../_assets/csvs/"+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
+                        figure = "python3 figures.py --file "+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
                         os.system(figure)
                         i+=2
             
@@ -134,4 +141,5 @@ for file in file_list:
         if (file[1:]+".py" in code_list):
             code = "python3"+file[1:]+".py"
             os.system(code)
+print ("\\clearpage")
 print ("\\end{document"+"}")

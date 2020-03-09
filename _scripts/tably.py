@@ -168,7 +168,7 @@ class Tably:
 
     def create_row(self, line, indent):
         """Creates a row based on `line` content"""
-        return r'{indent}{indent}{content} \\'.format(
+        return r'{indent}{indent}{content} \\ \hline'.format(
              indent=indent,
              content=' & '.join(self.tex_str(line)))
 

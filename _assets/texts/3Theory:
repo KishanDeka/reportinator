@@ -30,9 +30,7 @@ From the plot of Q Vs 1/I , the slope gives :
 
 \subsection{ExpEyes:}
 
-This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments.
-
-image(image.png)
+This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments. \ref{fig:image} \ref{fig:alpha} \ref{tbl:alpha}
 
 \subsection{Electromagnetic Induction:}
 

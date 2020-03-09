@@ -666,6 +666,7 @@
 %\typeout{-- See the "IEEEtran_HOWTO" manual for usage information.}
 %\typeout{-- The source comments contain changelog notes.}
 \NeedsTeXFormat{LaTeX2e}
+\usepackage[utf8]{inputenc}
 \usepackage{times}
 \usepackage{graphicx}
 \usepackage{amssymb}

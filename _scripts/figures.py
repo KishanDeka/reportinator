@@ -14,9 +14,9 @@ parser.add_argument('-x', required=True, help="Input the column number for x")
 parser.add_argument('-y', required=True, help="Input the column number for y")
 # parser.add_argument('--fit', required=False, help="Input the fit function")
 args = parser.parse_args()
-
+file = args.file
 #inputs and initializations
-in_file = "../_assets/"+args.file
+in_file = "../_assets/csvs/"+args.file
 x_index = int(args.x) - 1
 y_index = int(args.y) - 1
 data = pd.read_csv(in_file)
@@ -40,9 +40,11 @@ def plot(x_name, y_name, data):
     f.savefig("../_assets/"+y_name.split(" ")[0]+".pdf", bbox_inches = 'tight')
     return y_name
 
+file_name = file[:-4]
+
 def pregraph(name):
     location = "../_assets/"+name.split(" ")[0]+".pdf"
-    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n' +'\\end{figure}')
+    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{\"fig:'+file_name+'\"}'+'\n'+'\\end{figure}')
     return 0
 # def fit():
 #     if fun == "expo":

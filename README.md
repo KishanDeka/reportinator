@@ -20,10 +20,7 @@ For the sake of this project, these packages/programs have to be installed:
 ```shell
 pip install pypandoc && pip3 install pypandoc
 ```
-* Pandoc-Eqnos
-```shell
-pip install pandoc-eqnos
-```
+* pandoc-xnos installation: [install xnos](https://github.com/tomduck/pandoc-xnos/#Installation)
 * shutil
 
 If there are any problems, please check if your python versions are correct.
@@ -58,13 +55,14 @@ For putting in equations, you must type:
 $$ your-equation $$ {#eq:tag}
 ```
 For referencing them anywhere inside the text, you just need to type `@eq:tag` or `{@eq:tag}` at the appropriate place.
-More: [pandoc-eqnos]('https://github.com/tomduck/pandoc-eqnos')
 
 ### Images:
 Example for inserting images into the markdown:
 ```markdown
 image(name.png)
 ```
+Refer to these images by saying {@fig:name} in-text.
+
 ### Tables:
 Tables are made from csvs placed in `_assets/csvs/`. All the csv files placed here will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns.
 
@@ -78,6 +76,7 @@ Where x,y pairs are column pairs that need to be plotted. Without this tag at th
 ## Templates
 This code supports templates. All the class files are to be stored in `_layouts/`. Please add these lines to your custom class file, after `\NeedsTeXFormat{LaTeX2e}`:
 ```latex
+ \usepackage[utf8]{inputenc}
  \usepackage{times}
  \usepackage{graphicx}
  \usepackage{amssymb}

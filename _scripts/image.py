@@ -3,6 +3,7 @@ import os
 
 parser = argparse.ArgumentParser(description='Image Processing in reportinator')
 parser.add_argument('--file', required=True, help="Directory path of the source files, without / at the end")
+
 args = parser.parse_args()
 file = args.file
 location = "../_assets/"+args.file
@@ -16,6 +17,6 @@ def ext(fp):
 
 file_name = ext(location)
 
-print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{fig:'+file_name+'}'+'\n'+'\\end{figure}')
+print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{\"fig:'+file_name+'\"}'+'\n'+'\\end{figure}')
 
 
