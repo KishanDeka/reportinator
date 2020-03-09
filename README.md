@@ -19,10 +19,9 @@ For the sake of this project, these packages/programs have to be installed:
 * Pandas
 * Pandoc (Native pandoc installation and python-pip pypandoc installation both are needed.)
 ```shell
-pip install pypandoc && pip3 install pypandoc
+pip3 install pypandoc
 ```
 * pandoc-xnos installation: [install xnos](https://github.com/tomduck/pandoc-xnos/#Installation)
-* shutil
 
 If there are any problems, please check if your python versions are correct.
 
