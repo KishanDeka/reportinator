@@ -1,12 +1,12 @@
-# Abstract:
+# Abstract
 Dick
 
-# Objective:
+# Objective
 The objectives of this two part disjoint experiment series will be to:  
 
 - Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
 - Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
-# Theory:
+# Theory
 ## Electron Spin Resonance:
 Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. 
 image(image.png)
@@ -56,19 +56,19 @@ Our job here, will be to calculate the magnetic moment of the small magnet by fi
 ## Induced Voltage in a photodiode:
 This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
 
-# Observations:
+# Observations
 
 
 
-# Graphs:
+# Graphs
 
 
 
-# Conclusion:
+# Conclusion
 We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m$^2$. Substituting: P = 5, $\nu = 14.37 \times 10^6 Hz$ and slope = 0.195 in we also get $g = 1.565$, which is pretty close to it's actual value.
 
-# Precautions:
+# Precautions
 - Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
 - The magnet must be dropped as vertically as possible
-# References:
+# References
 Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319–325.

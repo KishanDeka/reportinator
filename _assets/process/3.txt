@@ -1,4 +1,4 @@
-# Theory:
+# Theory
 ## Electron Spin Resonance:
 Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field. 
 image(image.png)

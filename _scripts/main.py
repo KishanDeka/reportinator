@@ -115,7 +115,7 @@ for file in file_list:
     ## We have the file[1:] to account for naming as 1Abc. The ordering is set by the numbering in front.
     
     # ABSTRACT
-    if file[1:] == "Abstract:":
+    if file[1:] == "Abstract":
         name = file[1:] 
         print ("\\begin{"+"abstract"+"}")
         f = open("../_assets/texts/"+file, 'r')
@@ -124,7 +124,7 @@ for file in file_list:
         print ("\\end{"+"abstract"+"}")
 
     # TABLES
-    elif file[1:] == "Observations:":
+    elif file[1:] == "Observations":
         name = file[1:] 
         print ("\\section{"+name+"}")
         for source in source_csv:
@@ -137,7 +137,7 @@ for file in file_list:
     elif file[1:] == "DS_Store":
         pass
     # GRAPHS
-    elif file[1:] == "Graphs:":
+    elif file[1:] == "Graphs":
         name = file[1:] 
         print ("\\section{"+name+"}")
         for source in source_csv:
