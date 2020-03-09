@@ -98,7 +98,6 @@ for file in os.listdir("../_assets/texts"):
     output = pypandoc.convert_file("../_assets/texts/"+file+".md", to='latex', format='markdown-auto_identifiers' ,outputfile="../_assets/texts/"+file+".tex", extra_args=pdoc_args,
                          filters=filters)
     assert output == ""
-    #os.system("pandoc -f markdown-auto_identifiers --filter pandoc-eqnos --wrap=preserve -t latex ../_assets/texts/"+file+".md >> ../_assets/texts/"+file+".tex")
     os.remove("../_assets/texts/"+file+".md")
     shutil.copy("../_assets/texts/"+file+".tex", "../_assets/texts/"+file)
     os.remove("../_assets/texts/"+file+".tex")
