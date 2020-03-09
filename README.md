@@ -17,7 +17,7 @@ For the sake of this project, these packages/programs have to be installed:
 * Python 3.7 onwards
 * LaTeX
 * Pandas
-* Pandoc (Install both the pypandoc and pandoc for your machine)
+* Pandoc (Native pandoc installation and python-pip pypandoc installation both are needed.)
 ```shell
 pip install pypandoc && pip3 install pypandoc
 ```
