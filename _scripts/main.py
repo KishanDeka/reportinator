@@ -11,10 +11,6 @@ script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
 os.chdir(script)
 pythonpath = sys.executable
 
-# Clean
-shutil.rmtree("../tex_out", ignore_errors=True, onerror=None)
-os.mkdir("../tex_out")
-
 # Source Directory
 parser = argparse.ArgumentParser(description='Welcome to Reportinator 1.0')
 parser.add_argument('--source', required=True, help="Directory path of the source files, without / at the end")
@@ -79,7 +75,7 @@ for file in os.listdir("../_assets/csvs"):
 
 
 # CODE FOR WRITING
-print ("\\documentclass{../_layouts/"+documentstyle+"}\n")
+print ("\\documentclass{"+documentstyle+"}\n")
 print ("\\begin{"+"document}\n")
 print ("\\title{"+title+"}\n")
 print ("\\author{"+author+"}\n")

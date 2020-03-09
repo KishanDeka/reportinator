@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import argparse
+import sys
 
 plt.style.use('seaborn-ticks')
 
@@ -43,7 +44,7 @@ def plot(x_name, y_name, data):
 file_name = file[:-4]
 
 def pregraph(name):
-    location = "../_assets/"+name.split(" ")[0]+".pdf"
+    location = "./"+name.split(" ")[0]+".pdf"
     print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{fig:\"'+file_name+'\"}'+'\n'+'\\end{figure}')
     return 0
 # def fit():

@@ -6,6 +6,7 @@
 import argparse
 import csv
 import os
+import sys
 
 
 PREAMBLE = r"""\documentclass[11pt, a4paper]{article}
