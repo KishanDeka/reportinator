@@ -9,7 +9,7 @@ git clone "https://github.com/spandananupam/reportinator"
 ## Basic Usage:
 You can edit the basic configurations in `meta.csv`. The whole code is activated in `_scripts/` by:
 ```shell
-python main.py --source path/to/source/directory
+python3 main.py --source path/to/source/directory
 ```
 
 ## Dependencies:
