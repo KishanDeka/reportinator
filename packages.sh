@@ -18,5 +18,6 @@ brew install pandoc-citeproc
 
 # pip packages
 pip3 install --upgrade pip
+pip3 install pandas
 pip3 install pypandoc
 pip3 install pandoc-eqnos
