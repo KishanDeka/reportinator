@@ -1,7 +1,11 @@
-import os
-import sys
+import csv
 
-def get_script_path():
-    print (os.path.dirname(os.path.realpath(sys.argv[0])))
-
-get_script_path()
+def numcol(file):
+    datafilename = '../_assets/csvs/'+file
+    f=open(datafilename,'r')
+    reader=csv.reader(f,delimiter=',')
+    ncol=len(next(reader)) 
+    f.seek(0)
+    for row in reader:
+        pass
+    return ncol

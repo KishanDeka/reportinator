@@ -60,7 +60,7 @@ for file in os.listdir("../"):
     if ext(path) == "md" and file[:-3] != "README":
         inputfile = file[:-3]
 
-# METADATA
+# GLOBAL METADATA
 data=list(csv.reader("../meta.csv"))
 documentstyle = meta(2) # change for meta.csv
 author = meta(0) # change for meta.csv
@@ -78,8 +78,8 @@ for file in os.listdir("../_scripts"):
 for file in os.listdir("../_assets/csvs"):
     source_csv.append(file)
 
-# CODE FOR WRITING
 
+# CODE FOR WRITING
 print ("\\documentclass{../_layouts/"+documentstyle+"}\n")
 print ("\\begin{"+"document}\n")
 print ("\\title{"+title+"}\n")
@@ -87,7 +87,26 @@ print ("\\author{"+author+"}\n")
 print ("\\date{"+"\\today"+"}")
 print ("\\maketitle\n")
 
-table_header = "\\begin{"+"table"+"}[H]"+"\n"+"\\centering"+"\n"+"\\resizebox{"+"\\columnwidth"+"}{"+"!"+"}{%"+"\n"+"\\begin{"+"tabular"+"}{"+"|c|c|c|c|"+"}"+"\n"+"\\hline"
+# FOR NUMBER OF COLUMNS
+def numcol(file):
+    datafilename = '../_assets/csvs/'+file
+    f=open(datafilename,'r')
+    reader=csv.reader(f,delimiter=',')
+    ncol=len(next(reader)) 
+    f.seek(0)
+    for row in reader:
+        pass
+    return ncol
+
+# TABLE METADATA
+def table_header(n):
+    i = 1
+    cs = '|'
+    while i < n+1:
+        cs = cs+'c|'
+        i+=1
+    print("\\begin{"+"table"+"}[H]"+"\n"+"\\centering"+"\n"+"\\resizebox{"+"\\columnwidth"+"}{"+"!"+"}{%"+"\n"+"\\begin{"+"tabular"+"}{"+cs+"}"+"\n"+"\\hline")
+
 def tab_foot(tab_caption, tab_label):
     table_footer = "\\end{"+"tabular"+"}%"+"\n"+"}"+"\n"+"\\caption{"+tab_caption+"}"+"\n"+"\\label{"+"tbl:\""+tab_label+"\"}"+"\n"+"\\end{"+"table"+"}"
     print (table_footer)
@@ -110,7 +129,8 @@ for file in file_list:
         print ("\\section{"+name+"}")
         for source in source_csv:
             if source != ".DS_Store":
-                print (table_header)
+                n = numcol(source)
+                table_header(n)
                 os.system("python3 tably.py -fec table ../_assets/csvs/" + source)   
                 tab_foot(source[:-4],source[:-4])
             # figure out exactly
