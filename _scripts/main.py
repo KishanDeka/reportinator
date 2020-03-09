@@ -9,8 +9,7 @@ import sys
 # Change working directory
 script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
 os.chdir(script)
-
-
+pythonpath = sys.executable
 
 # Clean
 shutil.rmtree("../tex_out", ignore_errors=True, onerror=None)
@@ -33,7 +32,7 @@ def image(source):
             content = line.strip()
             if content[:6] == "image(":
                 file = content[content.index('(')+1:content.index(')')]
-                os.system("python3 image.py --file "+file)    
+                os.system(pythonpath+" image.py --file "+file)    
             else:
                 print (content)
 
@@ -44,7 +43,7 @@ def meta(x):
         return (data[1][x]) 
 
 # GETTING DATA
-os.system("python3 separate.py --file "+path)
+os.system(pythonpath+" separate.py --file "+path)
 
 def ext(fp):
     ext = os.path.splitext(fp)[-1].lower()
@@ -131,7 +130,7 @@ for file in file_list:
             if source != ".DS_Store":
                 n = numcol(source)
                 table_header(n)
-                os.system("python3 tably.py -fec table ../_assets/csvs/" + source)   
+                os.system(pythonpath+" tably.py -fec table ../_assets/csvs/" + source)   
                 tab_foot(source[:-4],source[:-4])
             # figure out exactly
     elif file[1:] == "DS_Store":
@@ -164,7 +163,7 @@ for file in file_list:
                         #fitfun = fit_list[i]
                         X = graph_list[i]
                         Y = graph_list[i+1]
-                        figure = "python3 figures.py --file "+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
+                        figure = pythonpath+" figures.py --file "+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
                         os.system(figure)
                         i+=2
             
@@ -175,7 +174,7 @@ for file in file_list:
         path = "../_assets/texts/"+file
         image(path)
         if (file[1:]+".py" in code_list):
-            code = "python3"+file[1:]+".py"
+            code = pythonpath+" "+file[1:]+".py"
             os.system(code)
 print ("\\clearpage")
 print ("\\end{document"+"}")
