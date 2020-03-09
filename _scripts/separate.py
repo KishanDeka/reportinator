@@ -36,12 +36,13 @@ for file in os.listdir(source):
     elif ext(path) == "csv" and file != "meta.csv":
         shutil.copy(path,'../_assets/csvs/'+file)
     elif ext(path) == "md":
-        shutil.copy(path,'../input.md')       
+        inputdir = '../'+file
+        shutil.copy(path,'../'+file)
     else:
         shutil.copy(path,'../_assets/'+file)
 
 # Separate into numbers
-with open("../input.md", "r") as f:
+with open(inputdir, "r") as f:
     head = []
     k = 1
     for lane in f:
@@ -53,7 +54,7 @@ with open("../input.md", "r") as f:
         else:
             pass
 
-with open("../input.md", "r") as g:
+with open(inputdir, "r") as g:
     buff = [] 
     i = 0
     for line in g:

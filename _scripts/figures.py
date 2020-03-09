@@ -44,7 +44,7 @@ file_name = file[:-4]
 
 def pregraph(name):
     location = "../_assets/"+name.split(" ")[0]+".pdf"
-    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{\"fig:'+file_name+'\"}'+'\n'+'\\end{figure}')
+    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{fig:\"'+file_name+'\"}'+'\n'+'\\end{figure}')
     return 0
 # def fit():
 #     if fun == "expo":

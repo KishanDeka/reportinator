@@ -10,6 +10,8 @@ import sys
 script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
 os.chdir(script)
 
+
+
 # Clean
 shutil.rmtree("../tex_out", ignore_errors=True, onerror=None)
 os.mkdir("../tex_out")
@@ -44,11 +46,25 @@ def meta(x):
 # GETTING DATA
 os.system("python3 separate.py --file "+path)
 
+def ext(fp):
+    ext = os.path.splitext(fp)[-1].lower()
+    if ext == ".csv":
+        return ("csv")
+    elif ext == ".md":
+        return ("md")
+    else:
+        return ("something")
+
+for file in os.listdir("../"):
+    path = '../'+file
+    if ext(path) == "md" and file[:-3] != "README":
+        inputfile = file[:-3]
+
 # METADATA
 data=list(csv.reader("../meta.csv"))
 documentstyle = meta(2) # change for meta.csv
 author = meta(0) # change for meta.csv
-title = meta(3)
+title = inputfile # meta(3)
 
 # MAKE FILE, CODE and CSV LISTS
 source_csv = []
@@ -73,7 +89,7 @@ print ("\\maketitle\n")
 
 table_header = "\\begin{"+"table"+"}[H]"+"\n"+"\\centering"+"\n"+"\\resizebox{"+"\\columnwidth"+"}{"+"!"+"}{%"+"\n"+"\\begin{"+"tabular"+"}{"+"|c|c|c|c|"+"}"+"\n"+"\\hline"
 def tab_foot(tab_caption, tab_label):
-    table_footer = "\\end{"+"tabular"+"}%"+"\n"+"}"+"\n"+"\\caption{"+tab_caption+"}"+"\n"+"\\label{\""+"tbl:"+tab_label+"\"}"+"\n"+"\\end{"+"table"+"}"
+    table_footer = "\\end{"+"tabular"+"}%"+"\n"+"}"+"\n"+"\\caption{"+tab_caption+"}"+"\n"+"\\label{"+"tbl:\""+tab_label+"\"}"+"\n"+"\\end{"+"table"+"}"
     print (table_footer)
 
 for file in file_list:

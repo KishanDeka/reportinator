@@ -17,6 +17,6 @@ def ext(fp):
 
 file_name = ext(location)
 
-print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{\"fig:'+file_name+'\"}'+'\n'+'\\end{figure}')
+print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+file_name+'}'+'\n'+'\\label{fig:\"'+file_name+'\"}'+'\n'+'\\end{figure}')
 
 
