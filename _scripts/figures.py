@@ -21,6 +21,7 @@ in_file = "../_assets/csvs/"+args.file
 x_index = int(args.x) - 1
 y_index = int(args.y) - 1
 data = pd.read_csv(in_file)
+data = data[:-1]
 x_name = data.columns[x_index]
 y_name = data.columns[y_index]
 in_x = 0

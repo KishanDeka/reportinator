@@ -169,9 +169,13 @@ class Tably:
 
     def create_row(self, line, indent):
         """Creates a row based on `line` content"""
-        return r'{indent}{indent}{content} \\ \hline'.format(
-             indent=indent,
-             content=' & '.join(self.tex_str(line)))
+        check = str(line[0])
+        if (check.strip()[:5]) == 'graph':
+            return r''
+        else:
+            return r'{indent}{indent}{content} \\ \hline'.format(
+                indent=indent,
+                content=' & '.join(self.tex_str(line)))
 
     def combine_tables(self):
         """Combine all tables together and add a preamble if required.
