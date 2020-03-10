@@ -1,46 +1,55 @@
 # Aim of the Project:
-To make LaTeX reports easily from markdowns, containing the section data and marked CSVs. Current implementation spits out the LaTeX code into `stdout`. **!! This project is in no way complete in its current state, please do not expect a lot !!**. I am working on making this project cross platform, it will soon be. Please look around first, before doing anything.
+To make LaTeX reports easily from markdowns, containing the section data and marked CSVs. Please look at the example first, before doing anything.
 
-## Clone this repository:
+## Installation:
+Run `packages.sh` by running, and giving in your sudo password
+```shell
+bash packages.sh
+```
+Then clone the repo:
 ```shell
 git clone "https://github.com/spandananupam/reportinator"
 ```
+**For windows installation, please install Python 3.7+ and LaTeX, and use pip3 for all the pip packages written down in packages.sh**
 
 ## Basic Usage:
-You can edit the basic configurations in `meta.csv`. The whole code is activated in `_scripts/` by:
+The whole code is activated in `_scripts/` by:
 ```shell
-python3 main.py --source path/to/source/directory
+python3 run.py --source path/to/source/directory
+```
+For the first time only, the script will ask for default configuration options. The next time you want to reconfigure, you may run
+```shell
+python3 run.py --reconfig --source path/to/source/directory
+```
+
+For windows please make sure that your python version is up to date:
+```shell
+py run.py --source path/to/source/directory
 ```
 
 ## Dependencies:
 For the sake of this project, these packages/programs have to be installed:
 * Python 3.7 onwards
 * LaTeX
-* Pandas
-* Pandoc (Native pandoc installation and python-pip pypandoc installation both are needed.)
+* pandas
+```shell
+pip3 install pandas
+```
+* pypandoc
 ```shell
 pip3 install pypandoc
 ```
-* pandoc-xnos installation: [install xnos](https://github.com/tomduck/pandoc-xnos/#Installation)
+* pandoc-xnos [install xnos](https://github.com/tomduck/pandoc-xnos/#Installation)
 
-If there are any problems, please check if your python versions are correct.
+If there are any problems, please check if your python versions are correct, and then report issues
 
 ## File Structure:
-`input.md` is the Input markdown (Please look at the example given by default)
-
-`meta.csv` is the metadata required for each report.
-
-`_assets` contains csv files, images, and files that are being processed.
-* `csvs` contains all the csv files (Please look at the example given by default)
-* `process` and `texts` are to be ignored by the average user
 
 `_scripts` contains all the code. If you want a custom code to run in a particular section, you need to keep your script with the name same as the the name of the section.
 
-`_old` is to be ignored
-
 `_layouts` contains all the .cls files for LaTeX
 
-`tex_out` is supposed to be the processing place for everything .tex.
+`example_source` contains an example. Copy and paste this over to your favorite location and use the full address as the source tag while running `run.py`
 
 ## Input Markdown:
 The name of the input markdown is the title of the report. Please do not use ":" at the end of your main headings.
@@ -66,14 +75,17 @@ image(name.png)
 Refer to these images by saying {@fig:name} in-text.
 
 ### Tables:
-Tables are made from csvs placed in `_assets/csvs/`. All the csv files placed here will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns.
+All the csv files placed in the source folder will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns, in double column.
 
 ### Graphs:
-Graphs are made from csv files placed in `_assets/csvs/`. These are triggered by a graph statement at the end of the csvfile. They need to be in the first cell of the last row of the csvfile in a specific format.
+These are triggered by a graph statement at the end of the csvfile (Look at the example in example_source). They need to be in the first cell of the last row of the csvfile in a specific format.
 ```
 graph(x,y,x,y..)
 ```
 Where x,y pairs are column pairs that need to be plotted. Without this tag at the end of the csv, the table will only be passed as a table, and not into graphs.
+
+## Advanced Usage (For Pros only):
+If you want some special code to run in a specific section, then you might edit the corresponding existing code, or make a python code with the name same as the name of the section and place it in `_scripts/`. **Please note that in its current state, the name of the code is case sensitive. Name it exactly the same as your section heading**. If your code has some errors, it will print out to your tex code, or wont print at all.
 
 ## Templates
 This code supports templates. All the class files are to be stored in `_layouts/`. Please add these lines to your custom class file, after `\NeedsTeXFormat{LaTeX2e}`:
@@ -95,7 +107,6 @@ The graph python code uses seaborn, you may look at the different styles availab
 
 # To do:
 * Fitting in the graph
-* All in one code for running the python script, and outputting into a tex file, and compiling.
 
 # Example:
-One example has been loaded by default into this program. Please see it, before erasing out anything.
+One example has been given in the program at `example_source`

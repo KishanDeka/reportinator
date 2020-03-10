@@ -2,11 +2,10 @@
 
 # ubuntu
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install python3.8
+sudo apt-get install git
+sudo apt-get install python3
 sudo apt-get install python3-pip 
 sudo apt-get install texlive
-sudo apt-get install git
-sudo apt-get install dvipng texlive-latex-extra texlive-fonts-recommended 
 
 # macos
 brew install git

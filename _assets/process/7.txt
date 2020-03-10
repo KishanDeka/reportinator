@@ -1,6 +1,0 @@
-# Results
-
-- The amplification factor was obtained as: $\mu = 1.805 \times 10^3$
-- The small resistance was obtained to be: $r =0.031\Omega$
-- The mutual inductance of the given coil was obtained as: $M = 120.20 \mu H$
-

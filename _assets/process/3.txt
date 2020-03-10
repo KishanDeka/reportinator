@@ -1,8 +1,0 @@
-# Apparatus
-
-* Alpha spectroscopy chamber with vaccum pump • Scintillation Detector
-* Discriminator-preamplifier
-* MCA Box 
-* HF Cables
-* CASSY Lab software 
-

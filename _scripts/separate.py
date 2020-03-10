@@ -22,6 +22,11 @@ def ext(fp):
         return ("something")
 
 # Make new directories 
+for file in os.listdir("../"):
+    path = '../'+file
+    if ext(path) == "md" and file[:-3] != "README":
+        os.remove(path)
+
 shutil.rmtree("../_assets", ignore_errors=True, onerror=None)
 os.mkdir('../_assets')
 os.mkdir('../_assets/process')

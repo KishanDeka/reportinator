@@ -1,6 +1,0 @@
-# Aim of the ExperimENT
-
-* To record the alpha spectrum of $Am-241$ radioactive source at different pressures.
-* And to record the energy loss of alpha particles as a function of pressure,
-* And hence to determine the range of alpha radiation in air.
-

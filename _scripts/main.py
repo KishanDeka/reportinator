@@ -51,6 +51,7 @@ def ext(fp):
     else:
         return ("something")
 
+
 for file in os.listdir("../"):
     path = '../'+file
     if ext(path) == "md" and file[:-3] != "README":
@@ -176,3 +177,4 @@ for file in file_list:
             os.system(code)
 print ("\\clearpage")
 print ("\\end{document"+"}")
+os.remove("../"+inputfile+".md")
