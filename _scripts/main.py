@@ -5,6 +5,7 @@ import csv
 import argparse
 import shutil
 import sys
+import config
 
 # Change working directory
 script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
@@ -56,10 +57,11 @@ for file in os.listdir("../"):
         inputfile = file[:-3]
 
 # GLOBAL METADATA
-data=list(csv.reader("../meta.csv"))
-documentstyle = meta(2) # change for meta.csv
-author = meta(0) # change for meta.csv
-title = inputfile # meta(3)
+#data=list(csv.reader("../meta.csv"))
+documentstyle = config.style#meta(2) # change for meta.csv
+author = config.name#meta(0) # change for meta.csv
+affiliation = config.affiliation
+title=inputfile
 
 # MAKE FILE, CODE and CSV LISTS
 source_csv = []
@@ -78,7 +80,7 @@ for file in os.listdir("../_assets/csvs"):
 print ("\\documentclass{"+documentstyle+"}\n")
 print ("\\begin{"+"document}\n")
 print ("\\title{"+title+"}\n")
-print ("\\author{"+author+"}\n")
+print ("\\author{"+author+"\\thanks{"+affiliation+"}"+"}\n")
 print ("\\date{"+"\\today"+"}")
 print ("\\maketitle\n")
 

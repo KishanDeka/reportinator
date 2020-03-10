@@ -2,140 +2,171 @@
 
 \begin{document}
 
-\title{input}
+\title{inductance}
 
-\author{Spandan Anupam}
+\author{Spandan Anupam\thanks{National Institute of Science Education and Research}}
 
 \date{\today}
 \maketitle
 
 \begin{abstract}
-Dick
+
+bleh
+
 
 \end{abstract}
-\section{Objective}
-The objectives of this two part disjoint experiment series will be to:
+\section{Aim of the ExperimENT}
 
-\begin{itemize}
-\tightlist
-\item
-Study Electron Spin Resonance spectra for a given sample, and explain the number, and position of peaks
-\item
-Perform experiments with the ExpEyes system, one being studying the induced voltage when a small magnet is dropped through a coil, and the other being looking at how the voltage pulses when a led at a particular frequency is shown to a photodiode
-\end{itemize}
+* To record the alpha spectrum of $Am-241$ radioactive source at different pressures.
+* And to record the energy loss of alpha particles as a function of pressure,
+* And hence to determine the range of alpha radiation in air.
+
+\section{Aim of the ExperimENT.md}
+
+* To record the alpha spectrum of $Am-241$ radioactive source at different pressures.
+* And to record the energy loss of alpha particles as a function of pressure,
+* And hence to determine the range of alpha radiation in air.
+
+\section{Apparatus}
+
+* Alpha spectroscopy chamber with vaccum pump • Scintillation Detector
+* Discriminator-preamplifier
+* MCA Box
+* HF Cables
+* CASSY Lab software
+
 \section{Theory}
-\subsection{Electron Spin Resonance:}
 
-Electron spin resonance (ESR) or Electron paramagentic spin resonance (EPSR) is a spectroscopy method to study materials with unpaired electrons. The basic concept here, being that we see a particular energy being assigned to electrons, when kept in a magnetic field.
+Normal amplifiers, when amplifying weak signals, also amplifies the noise present in it. This noise incldes flicker noise at low frequencies which can be picked up from other electronics nearby, or thermal noise, which spans all frequencies and is of thermodynamic origin. Thsese noise signals can be ignored if we know the frequency of the signal we are looking for. This is what a lock-in amplifier does, extracting the signal given a known carrier wave.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width = \columnwidth]{./image.png}
-\caption{image}
-\label{fig:"image"}
+\includegraphics[width = \columnwidth]{./dickbutt.png}
+\caption{dickbutt}
+\label{fig:"dickbutt"}
 \end{figure}
-These being spin half paricles, we will either have the electron aligning parallel (\(m_s = 1/2\)) or antiparallel (\(m_s = -1/2\)) to the field. The energy assigned is given by:
-\[ E = m_s g_e \mu_B B_0 \]
-where:
-E refers to the energy\\
-\(m_s\) refers to the magnetic component of the spin\\
-\(g_e\) refers to the landé g factor\\
-\(\mu_B\) refers to a Bohr magneton\\
-and \(B_0\) is the applied magnetic field\\
-Now an electron can of course move between these two states by absorbing or emmiting a photon, with energy \(h\nu\). So we get another equation from here:\\
-\[ h\nu=m_s g_e \mu_B B_0 \]
-where:\\
-\(\nu\) is the wavenumber of the exciting RF wave.\\
-For our case, we are keeping the frequency of the RF wave constant, and changing the magnetic field. We will, at some point, reach an energy where the energy is absorbed the most, due to the transiton. We are assuming here that most of the electrons are in the lower energy level, in a normal case.
+$$
+R=\int_{E_0}^0 \frac{dx}{dE}\cdot dE dx
+$$
 
-We here, are attenuating a DC voltage through the coil with a small 50 Hz AC voltage, so that the magnetic field sweeps from \(I_{DC}\)-\(I_{AC max}\) to \(I_{DC}\)+\(I_{AC max}\). This will contain the absorbance energy.
 
-\[ H_0 = \frac{2\sqrt{2}H}{P}Q \]
-\[ H=\frac{32\pi n}{10\sqrt{125}a}I \]
-\[ H_0=2\sqrt{2}\frac{32\pi n}{10\sqrt{125}a}\frac{QI}{P} \]
-Substituting the value of a = 7.6 cm, n = 500 turns we get
+$$
+R \propto E_0^{3/2}
+$$
 
-\begin{equation} Q=\frac{10\sqrt{125}a PH_0}{64\sqrt{2}\pi n }\frac{1}{I}=\frac{PH_0}{168}\frac{1}{I} \label{eq:desc}\end{equation}
-From the plot of Q Vs 1/I , the slope gives :
-\[ \frac{PH_0}{168}=slope \implies H_0=slope \times \frac{168}{P} \]
-\[ g=\frac{h \nu}{H_0 \mu_0} = 4.25\times10^{-9} \frac{P \nu}{slope} \]
+$$
+x = \frac{c}{c_0}\cdot x_0
+$$
 
-\subsection{ExpEyes:}
+## Determining Small Resistance
 
-This is basically an interface which changes \ref{eq:desc} the analog signals we get, into digital. The ``digital oscilloscope'' gives us the freedom to do some simple physics experiments with a greater ease. The experiment mostly consisted of familiarization of oneself with the instruments. \ref{fig:image} \ref{fig:alpha} \ref{tbl:alpha}
+Measuring small resistances using conventional techniques can be tricky, since oftentimes, the resistance of the circuit itself can be higher than the resistance we are dealing with, which gives us a lot of noise. This can be solved by using lock-in amplifiers.
 
-\subsection{Electromagnetic Induction:}
+Using an AC signal, at each frequency, we plot a graph between $V_{DC}$ and $V_{AC}$, and get the slope.
 
-Electromagnetic Induction is the effect where we see a current being induced in a changin magnetic field. From (Najiya Maryam, 2014), we see that the expression for the induced current for a magnet falling through a coil is given by:
-\[ EMF = \frac{2\mu_o m}{2\pi}(-z_o+0.5\times gt^2) \times (R^2+(-z_o+0.5\times gt^2)^2)^\frac{-5}{2}\times gt \]
-where:\\
-EMF is the induced voltage\\
-\(m\) refers to the magentic moment of the small magnet\\
-g is the acceleration due to gravity\\
-\(\mu_o\) refers to a permittivity of free space\\
-t is the time\\
-R is the radius of the coil\\
-N is the number of turns\\
-\(z_o\) is the height from which the magnet is dropped\\
-Our job here, will be to calculate the magnetic moment of the small magnet by fitting the experimental data as close to the theoretical data. We will of course, have som deviations considering that the magnet does not stay straight at all times, there is air resistance, and many other factors that we considered. I took the liberty of matching the ``0s'\,' of the graphs and callibrating the digital data by hand, and not including it in the data listed.
+Since $dV_{AC}=RdI_{AC}$m where R is the resistance of the primary circuit, and $dI_{AC}$ is the change in current through the low resistance when the signal generator voltage is changed by $dV_{AC}$. Also, the voltage $V_r$ changes by $dV_r$ where $dV_r=rdI_{AC}$. Therefore, we have:
 
-\subsection{Induced Voltage in a photodiode:}
+$$
+\frac{dV_{DC}}{dV_{AC}}=\mu \frac{r}{R}
+$$
 
-This is relatively simple, we just need to observe what the voltage from the input to the LED is, and how that is affecting the photodiode. The plot is given in the observations section.
+## Determining Mutual Inductance
+
+Changing magnetic fields induces electric fields. Therefore, when a coil of wire is connected to an oscillating voltage, the changing magnetic fields due to it can induce an emf in a coil placed neaby.
+
+Hence, if the current supplied to the primary coil is ,
+then the emf induced in the secondary coil is obtained as:
+
+$$
+V=-M\frac{dI}{dt}= -2\pi Mft_0 sin(2\pi f t+\frac{\pi}{2})
+$$
+
+From above, it is evident that the induced current and the primary current are $90^o$ out of phase. Also, the induced current is directly proportional to the amplitude $I_0$ of the primary current, and it's frequency $f$.
+
 \section{Observations}
 \begin{table}[H]
 \centering
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-Temperature (C) & Temperature (K) & Capacitance (nF) & $\epsilon$ \\ \hline
+Temperature (in $^oC$) & $V_R$ & $V_C$ & Capacitance (in nF) &  &  \\ \hline
 \midrule
-23.5 & 296.5 & 635 & 4.04E-09 \\ \hline
-51 & 324 & 644 & 4.10E-09 \\ \hline
-56 & 329 & 650 & 4.14E-09 \\ \hline
-60 & 333 & 657 & 4.18E-09 \\ \hline
-65 & 338 & 658 & 4.19E-09 \\ \hline
-70 & 343 & 673 & 4.29E-09 \\ \hline
-75 & 348 & 695 & 4.43E-09 \\ \hline
-80 & 353 & 726 & 4.62E-09 \\ \hline
-85 & 358 & 767 & 4.89E-09 \\ \hline
-90 & 363 & 820 & 5.22E-09 \\ \hline
-95 & 368 & 905 & 5.76E-09 \\ \hline
-100 & 373 & 1020 & 6.50E-09 \\ \hline
-105 & 378 & 1120 & 7.13E-09 \\ \hline
-110 & 383 & 1100 & 7.01E-09 \\ \hline
-112 & 385 & 1050 & 6.69E-09 \\ \hline
-113 & 386 & 1028 & 6.55E-09 \\ \hline
-114 & 387 & 1000 & 6.37E-09 \\ \hline
-115 & 388 & 980 & 6.24E-09 \\ \hline
-116 & 389 & 958 & 6.10E-09 \\ \hline
-117 & 390 & 933 & 5.94E-09 \\ \hline
-118 & 391 & 910 & 5.80E-09 \\ \hline
-119 & 392 & 889 & 5.66E-09 \\ \hline
-120 & 393 & 870 & 5.54E-09 \\ \hline
+21.3 & 3.92 & 1.95 & 0.62 &  &  \\ \hline
+50 & 3.95 & 1.95 & 0.63 &  &  \\ \hline
+55 & 3.95 & 1.94 & 0.65 &  &  \\ \hline
+60 & 3.96 & 1.93 & 0.64 &  &  \\ \hline
+65 & 3.97 & 1.91 & 0.67 &  &  \\ \hline
+70 & 3.98 & 1.89 & 0.68 &  &  \\ \hline
+75 & 4 & 1.85 & 0.71 &  &  \\ \hline
+80 & 4.03 & 1.85 & 0.73 &  &  \\ \hline
+85 & 4.06 & 1.82 & 0.78 &  &  \\ \hline
+90 & 4.10 & 1.75 & 0.82 &  &  \\ \hline
+91 & 0.12 & 1.67 & 0.86 &  &  \\ \hline
+93 & 4.15 & 1.63 & 0.9 &  &  \\ \hline
+95 & 4.12 & 1.57 & 0.93 &  &  \\ \hline
+97 & 4.13 & 1.57 & 0.97 &  &  \\ \hline
+99 & 4.15 & 1.57 & 1.01 &  &  \\ \hline
+100 & 4.19 & 1.57 & 1.03 &  &  \\ \hline
+101 & 4.25 & 1.58 & 1.04 &  &  \\ \hline
+102 & 4.24 & 1.59 & 1.05 &  &  \\ \hline
+103 & 4.24 & 1.6 & 1.06 &  &  \\ \hline
+104 & 4.20 & 1.61 & 1.07 &  &  \\ \hline
+105 & 4.33 & 1.62 & 1.08 &  &  \\ \hline
+106 & 4.25 & 1.6 & 1.1 &  &  \\ \hline
+107 & 4.24 & 1.56 & 1.11 &  &  \\ \hline
+108 & 4.25 & 1.54 & 1.11 &  &  \\ \hline
+109 & 4.26 & 1.54 & 1.1 &  &  \\ \hline
+110 & 4.32 & 1.59 & 1.08 &  &  \\ \hline
+111 & 4.33 & 1.61 & 1.07 &  &  \\ \hline
+112 & 4.37 & 1.62 & 1.06 &  &  \\ \hline
+113 & 4.33 & 1.62 & 1.04 &  &  \\ \hline
+114 & 4.28 & 1.6 & 1.01 &  &  \\ \hline
+115 & 4.20 & 1.58 & 0.98 &  &  \\ \hline
+116 & 4.18 & 1.57 & 0.96 &  &  \\ \hline
+115 & 4.21 & 1.59 & 0.99 &  &  \\ \hline
+114 & 4.20 & 1.6 & 1.01 &  &  \\ \hline
+113 & 4.21 & 1.61 & 1.03 &  &  \\ \hline
+112 & 4.25 & 1.62 & 1.05 &  &  \\ \hline
+111 & 4.23 & 1.63 & 1.07 &  &  \\ \hline
+110 & 4.29 & 1.62 & 1.09 &  &  \\ \hline
+109 & 4.26 & 11.62 & 1.1 &  &  \\ \hline
+108 & 4.24 & 1.58 & 1.11 &  &  \\ \hline
+107 & 4.25 & 1.58 & 1.11 &  &  \\ \hline
+106 & 4.25 & 1.54 & 1.11 &  &  \\ \hline
+105 & 4.21 & 1.37 & 1.12 &  &  \\ \hline
+103 & 4.26 & 1.58 & 1.09 &  &  \\ \hline
+102 & 4.21 & 1.59 & 1.08 &  &  \\ \hline
+101 & 4.25 & 1.6 & 1.07 &  &  \\ \hline
+100 & 4.2 & 1.57 & 1.05 &  &  \\ \hline
+99 & 4.15 & 1.56 & 1.03 &  &  \\ \hline
+97 & 4.2 & 1.54 & 1.00 &  &  \\ \hline
+95 & 4.17 & 1.54 & 0.95 &  &  \\ \hline
+93 & 4.15 & 1.51 & 0.92 &  &  \\ \hline
+91 & 4.07 & 1.5 & 0.88 &  &  \\ \hline
+90 & 4.07 & 1.49 & 0.86 &  &  \\ \hline
+85 & 4.04 & 1.45 & 0.8 &  &  \\ \hline
+75 & 3.58 & 1.43 & 0.73 &  &  \\ \hline
+70 & 3.96 & 2.12 & 0.7 &  &  \\ \hline
 
 \end{tabular}%
 }
-\caption{alpha}
-\label{tbl:"alpha"}
+\caption{table1}
+\label{tbl:"table1"}
 \end{table}
 \section{Graphs}
-\begin{figure}[H]
-\centering
-\includegraphics[width = \columnwidth]{./Capacitance.pdf}
-\caption{alpha}
-\label{fig:"alpha"}
-\end{figure}
+\section{Results}
+
+- The amplification factor was obtained as: $\mu = 1.805 \times 10^3$
+- The small resistance was obtained to be: $r =0.031\Omega$
+- The mutual inductance of the given coil was obtained as: $M = 120.20 \mu H$
+
 \section{Conclusion}
-We see that experiments turned out to be as expected, I estimate the magnetic moment to be 1.6 A.m\(^2\). Substituting: P = 5, \(\nu = 14.37 \times 10^6 Hz\) and slope = 0.195 in we also get \(g = 1.565\), which is pretty close to it's actual value.
-\section{Precautions}
-\begin{itemize}
-\tightlist
-\item
-Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
-\item
-The magnet must be dropped as vertically as possible
-\end{itemize}
-\section{References}
-Najiya Maryam, K.M. (2014). EM induction experiment to determine the moment of a magnet. Physics Education, 49(3), pp.319--325.
+
+The functioning of a lock-in amplifier, and its use in extracting signal from noise using phase modulation of the reference signal was studied. These were used in obtaining the resistance of a given small resistance, and the mutual inductance of a given coil.
+
+
+
+
+
 \clearpage
 \end{document}

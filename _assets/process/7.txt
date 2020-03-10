@@ -1,3 +1,6 @@
-# Precautions
-- Care must be taken and the knobs adjusted to keep the phase zero at each change in current for ESR
-- The magnet must be dropped as vertically as possible
+# Results
+
+- The amplification factor was obtained as: $\mu = 1.805 \times 10^3$
+- The small resistance was obtained to be: $r =0.031\Omega$
+- The mutual inductance of the given coil was obtained as: $M = 120.20 \mu H$
+
