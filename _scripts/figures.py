@@ -31,7 +31,9 @@ in_y = 0
 #actual plotting and saving in PDF
 def plot(x_name, y_name, data):
     x = data[x_name]
+    x = list(map(float, x))
     y = data[y_name]
+    y = list(map(float, y))
     f = plt.figure()
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
