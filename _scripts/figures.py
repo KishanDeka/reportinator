@@ -20,7 +20,7 @@ dark=["#001C7F", "#B1400D", "#12711C", "#8C0800", "#591E71","#592F0D", "#A23582"
 dark6=["#001C7F", "#12711C", "#8C0800","#591E71", "#B8850A", "#006374"]
 colorblind=["#0173B2", "#DE8F05", "#029E73", "#D55E00", "#CC78BC","#CA9161", "#FBAFE4", "#949494", "#ECE133", "#56B4E9"]
 colorblind6=["#0173B2", "#029E73", "#D55E00","#CC78BC", "#ECE133", "#56B4E9"]
-black=['ffffff']
+black=['FFFFFF']
 
 # CHOOSE PALETTE
 palette=dark
