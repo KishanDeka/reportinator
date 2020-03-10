@@ -78,7 +78,7 @@ Refer to these images by saying {@fig:name} in-text.
 All the csv files placed in the source folder will be converted to tables. For good looking reports, please make sure that there are a maximum of 4 columns, in double column.
 
 ### Graphs:
-These are triggered by a graph statement at the end of the csvfile (Look at the example in example_source). They need to be in the first cell of the last row of the csvfile in a specific format.
+These are triggered by a graph statement at the end of the csvfile (Look at the example in example_source). They need to be in the first cell of the last row of the csvfile in a specific format. If you want the color scheme changed, there are 6 major color schemes inside `figures.py` that can be changed at will, or you may add your own.
 ```
 graph(x,y,x,y..)
 ```
