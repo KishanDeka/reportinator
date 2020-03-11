@@ -33,7 +33,8 @@ parser.add_argument('--index', required=True, help="Index")
 # parser.add_argument('--fit', required=False, help="Input the fit function")
 args = parser.parse_args()
 file = args.file
-n = args.index
+n = int(args.index)
+k = random.randint(0,len(palette))
 #inputs and initializations
 y_name_list=[]
 y_list=[]
@@ -49,7 +50,7 @@ for y_index in y_list:
 #fun = args.fit
 
 #actual plotting and saving in PDF
-def plot(x_name, y_name_list, data, n):
+def plot(x_name, y_name_list, data, n, k):
     x = data[x_name]
     x = list(map(float, x))
     f = plt.figure()
@@ -61,7 +62,10 @@ def plot(x_name, y_name_list, data, n):
         y = data[y_name]
         y = list(map(float, y))
         plt.plot (x,y, linestyle="dotted", marker = markers[i],
-            color=random.choice(palette), label="Observed, for "+y_name)
+            color=palette[k], label="Observed, for "+y_name)
+        k+=1
+        if k>len(palette):
+            k-=len(palette)
         i+=1
     plt.xlabel(r'%s' % x_name,fontsize = 13)
     plt.ylabel(r'%s'% y_name,fontsize = 13)
@@ -99,7 +103,7 @@ def pregraph(name,n):
 #     legend()
 
 # else:
-plot(x_name, y_name_list, data, n)
+plot(x_name, y_name_list, data, n, k)
 pregraph(y_name_list[-1], n)
 
 
