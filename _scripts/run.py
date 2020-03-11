@@ -5,6 +5,7 @@ import shutil
 import csv
 import config
 
+wd = os.getcwd()
 script = str(os.path.dirname(os.path.realpath(sys.argv[0])))
 os.chdir(script)
 
@@ -22,11 +23,14 @@ def ext(file,path):
         return ext
 
 parser = argparse.ArgumentParser(description='Welcome to Reportinator 1.0')
-parser.add_argument('--source', required=True, help="Directory path of the source files, without / at the end")
+parser.add_argument('--source', required=False, default=False, help="Directory path of the source files, without / at the end")
 parser.add_argument('--reconfig', required=False, default=False, action="store_true", help="Run the reconfiguration script")
 
 args = parser.parse_args()
-path = args.source
+if not args.source:
+    path = wd
+else:
+    path = args.source
 pythonpath = sys.executable
 
 if config.reconfig or args.reconfig:

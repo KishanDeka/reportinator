@@ -34,7 +34,7 @@ parser.add_argument('--index', required=True, help="Index")
 args = parser.parse_args()
 file = args.file
 n = int(args.index)
-k = random.randint(0,len(palette))
+k = random.randint(0,len(palette)-1)
 #inputs and initializations
 y_name_list=[]
 y_list=[]
@@ -64,8 +64,8 @@ def plot(x_name, y_name_list, data, n, k):
         plt.plot (x,y, linestyle="dotted", marker = markers[i],
             color=palette[k], label="Observed, for "+y_name)
         k+=1
-        if k>len(palette):
-            k-=len(palette)
+        if k>len(palette)-1:
+            k-=len(palette)-1
         i+=1
     plt.xlabel(r'%s' % x_name,fontsize = 13)
     plt.ylabel(r'%s'% y_name,fontsize = 13)

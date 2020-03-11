@@ -1,5 +1,5 @@
 # configurationfile
 reconfig=True
-name="Unset"
-affiliation="Unset"
+name=""
+affiliation=""
 style="ieeeconf"

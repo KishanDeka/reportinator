@@ -13,10 +13,15 @@ git clone "https://github.com/spandananupam/reportinator"
 **For windows installation, please install Python 3.7+ and LaTeX, and use pip3 for all the pip packages written down in packages.sh**
 
 ## Basic Usage:
-The whole code is activated in `_scripts/` by:
+The whole code is activated in `_scripts/` by, first going to your source .md and .csv location:
 ```shell
-python3 run.py --source path/to/source/directory
+python3 /path/to/run.py
 ```
+If you want to run it from somewhere else, you may use the source tag:
+```shell
+python3 /path/to/run.py --source /path/to/source (no last /)
+```
+Please avoid using numbers in the source directory name.
 For the first time only, the script will ask for default configuration options. The next time you want to reconfigure, you may run
 ```shell
 python3 run.py --reconfig --source path/to/source/directory
