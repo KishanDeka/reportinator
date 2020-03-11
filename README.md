@@ -80,9 +80,9 @@ All the csv files placed in the source folder will be converted to tables. For g
 ### Graphs:
 These are triggered by a graph statement at the end of the csvfile (Look at the example in example_source). They need to be in the first cell of the last row of the csvfile in a specific format. If you want the color scheme changed, there are 6 major color schemes inside `figures.py` that can be changed at will, or you may add your own.
 ```
-graph(x,y,x,y..)
+graph(x,y1,y2;x,y;..)
 ```
-Where x,y pairs are column pairs that need to be plotted. Without this tag at the end of the csv, the table will only be passed as a table, and not into graphs.
+Where x,y pairs are column pairs that need to be plotted. Without this tag at the end of the csv, the table will only be passed as a table, and not into graphs. Please run the code again if you get the same colors. It is normal to get the same color multiple times because the color is chosen at random, and there are only so many.
 
 ## Advanced Usage (For Pros only):
 If you want some special code to run in a specific section, then you might edit the corresponding existing code, or make a python code with the name same as the name of the section and place it in `_scripts/`. **Please note that in its current state, the name of the code is case sensitive. Name it exactly the same as your section heading**. If your code has some errors, it will print out to your tex code, or wont print at all.

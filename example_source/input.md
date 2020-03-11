@@ -1,5 +1,5 @@
 # Abstract
-Dick
+The Abstract goes here
 
 # Objective
 The objectives of this two part disjoint experiment series will be to:  

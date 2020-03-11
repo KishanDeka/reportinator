@@ -1,4 +1,4 @@
-Temperature (C),Temperature (K),Capacitance (nF),$\epsilon$
+Temperature (C),Temperature (K),Capacitance (nF),Permittivity ($\epsilon$)
 23.5,296.5,635,4.04E-09
 51,324,644,4.10E-09
 56,329,650,4.14E-09
@@ -22,4 +22,4 @@ Temperature (C),Temperature (K),Capacitance (nF),$\epsilon$
 118,391,910,5.80E-09
 119,392,889,5.66E-09
 120,393,870,5.54E-09
-"graph(2,3)",,,
+"graph(2,3;2,3,4)",,,

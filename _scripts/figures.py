@@ -28,44 +28,51 @@ palette=dark
 # parser
 parser = argparse.ArgumentParser(description='Program for plotting and fitting figures for laTex reportinator 1.0')
 parser.add_argument('--file', required=True, help="Input the name of the csv file to be converted into a figure, placed in assets")
-parser.add_argument('-x', required=True, help="Input the column number for x")
-parser.add_argument('-y', required=True, help="Input the column number for y")
+parser.add_argument('--list', required=True, help="Input the list of column numbers")
+parser.add_argument('--index', required=True, help="Index")
 # parser.add_argument('--fit', required=False, help="Input the fit function")
 args = parser.parse_args()
 file = args.file
+n = args.index
 #inputs and initializations
+y_name_list=[]
+y_list=[]
 in_file = "../_assets/csvs/"+args.file
-x_index = int(args.x) - 1
-y_index = int(args.y) - 1
+y_list = (args.list).split(',')
+y_list = [int(x) - 1 for x in y_list]
+x_index = y_list.pop(0)
 data = pd.read_csv(in_file)
 data = data[:-1]
 x_name = data.columns[x_index]
-y_name = data.columns[y_index]
-in_x = 0
-in_y = 0
+for y_index in y_list:
+    y_name_list.append(data.columns[y_index])
 #fun = args.fit
 
 #actual plotting and saving in PDF
-def plot(x_name, y_name, data):
+def plot(x_name, y_name_list, data, n):
     x = data[x_name]
     x = list(map(float, x))
-    y = data[y_name]
-    y = list(map(float, y))
     f = plt.figure()
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
-    plt.plot (x,y, linestyle="dotted", marker = "o",
-            color=random.choice(palette), label="Observed Data")
+    i=0
+    markers=['o','+','s','^','x','D','v']
+    for y_name in y_name_list:
+        y = data[y_name]
+        y = list(map(float, y))
+        plt.plot (x,y, linestyle="dotted", marker = markers[i],
+            color=random.choice(palette), label="Observed, for "+y_name)
+        i+=1
     plt.xlabel(r'%s' % x_name,fontsize = 13)
     plt.ylabel(r'%s'% y_name,fontsize = 13)
     plt.legend()
-    f.savefig("../_assets/"+y_name.split(" ")[0]+".pdf", bbox_inches = 'tight')
-    return y_name
+    f.savefig("../_assets/"+y_name.split(" ")[0]+str(n)+".pdf", bbox_inches = 'tight')
+    return y_name_list[-1]
 
 file_name = file[:-4]
 
-def pregraph(name):
-    location = "./"+name.split(" ")[0]+".pdf"
+def pregraph(name,n):
+    location = "./"+name.split(" ")[0]+str(n)+".pdf"
     tag = name.split(" ")[0]
     tag_new = tag.lower()
     print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+tag+'}'+'\n'+'\\label{fig:\"'+tag_new+'\"}'+'\n'+'\\end{figure}')
@@ -92,7 +99,7 @@ def pregraph(name):
 #     legend()
 
 # else:
-y_name = plot(x_name, y_name, data)
-pregraph(y_name)
+plot(x_name, y_name_list, data, n)
+pregraph(y_name_list[-1], n)
 
 

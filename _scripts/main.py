@@ -156,15 +156,14 @@ for file in file_list:
                     #fitlist = extract(penline) #stuff between brackets
                     #fit_list = []
                     #fit_list = fitlist.split(',')
-                    graph_list = graph.split(',')
+                    graph_list = graph.split(';')
                     i = 0
                     while i < len(graph_list):
                         #fitfun = fit_list[i]
-                        X = graph_list[i]
-                        Y = graph_list[i+1]
-                        figure = pythonpath+" figures.py --file "+source+" -x "+str(X)+" -y "+str(Y)#+" --fit "+fitfun
+                        grlst = graph_list[i]
+                        figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(i)#+" --fit "+fitfun
                         os.system(figure)
-                        i+=2
+                        i+=1
             
     # NEW CODE AND REST   
     else:
