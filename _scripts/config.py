@@ -1,5 +1,6 @@
 # configurationfile
-reconfig=True
-name=""
-affiliation=""
+
+reconfig=False
+name="Spandan Anupam"
+affiliation="NISER"
 style="ieeeconf"

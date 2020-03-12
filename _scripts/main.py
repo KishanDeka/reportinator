@@ -138,6 +138,7 @@ for file in file_list:
     elif file[1:] == "Graphs":
         name = file[1:] 
         print ("\\section{"+name+"}")
+        n=0
         for source in source_csv:
             # read last line
             if source != ".DS_Store":
@@ -157,13 +158,15 @@ for file in file_list:
                     #fit_list = []
                     #fit_list = fitlist.split(',')
                     graph_list = graph.split(';')
+                    print(graph_list)
                     i = 0
                     while i < len(graph_list):
                         #fitfun = fit_list[i]
                         grlst = graph_list[i]
-                        figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(i)#+" --fit "+fitfun
+                        figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(n)#+" --fit "+fitfun
                         os.system(figure)
                         i+=1
+                        n+=1
             
     # NEW CODE AND REST   
     else:
