@@ -154,16 +154,21 @@ for file in file_list:
                 if compare == "graph":
                     graph = extract(lastline) #stuff between brackets
                     graph_list = []
-                    #fitlist = extract(penline) #stuff between brackets
-                    #fit_list = []
-                    #fit_list = fitlist.split(',')
+                    fit_list = []
+                    if penline[:5] == "\"fit(":
+                        fitlist = extract(penline) #stuff between brackets
+                        fit_list = fitlist.split(',')
                     graph_list = graph.split(';')
-                    print(graph_list)
                     i = 0
                     while i < len(graph_list):
-                        #fitfun = fit_list[i]
                         grlst = graph_list[i]
-                        figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(n)#+" --fit "+fitfun
+                        if fit_list:
+                            fitfun = fit_list[i]
+                            if fit_list[i] == "0":
+                                fitfun == False
+                            figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(n)+" --fit "+fitfun
+                        else:
+                            figure = pythonpath+" figures.py --file "+source+" --list "+str(grlst)+" --index "+str(n)
                         os.system(figure)
                         i+=1
                         n+=1

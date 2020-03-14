@@ -1,6 +1,5 @@
 # configurationfile
-
-reconfig=False
-name="Spandan Anupam"
-affiliation="NISER"
+reconfig=True
+name="Unset"
+affiliation="Unset"
 style="ieeeconf"
