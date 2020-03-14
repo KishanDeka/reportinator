@@ -5,6 +5,7 @@ import numpy as np
 import argparse
 import sys
 import random
+import functions as fn
 
 plt.style.use('bmh')
 palette = []
@@ -66,10 +67,8 @@ def plot(x_name, y_name_list, data, n, k):
         if not args.fit:
             pass
         else:
-            p,res = fit(x,y, fun)
+            p,_= fit(x,y, fun)
             fitfig = np.poly1d(p)
-            figname = "$"+str(fitfig)+"$"
-            print ("The graph below has been plotted with the equation: "+figname)
             plt.plot(x,fitfig(x), linestyle='dotted',color=palette[k+1],label="Fitted Data")
         k+=1
         if k>len(palette)-1:
@@ -94,19 +93,36 @@ def fit(x,y,fun):
     # if fun == "expo":
     #     func.expo()
     if fun == "lin":
-        p,res, _, _, _ = np.polyfit(x,y,1,full=True)
+        p, pcov = np.polyfit(x,y,1,cov=True)
+        p_sigma = np.sqrt(np.diag(pcov))
+        fitfun = fn.lin(p,p_sigma)
+        print (r'%s' % fitfun)
     elif fun == "pol2":
-        p,res, _, _, _ = np.polyfit(x,y,2,full=True)
+        p, pcov = np.polyfit(x,y,2,cov=True)
+        p_sigma = np.sqrt(np.diag(pcov))
+        fitfun = fn.pol2(p,p_sigma)
+        print (r'%s' % fitfun)
     elif fun == "pol3":
-        p,res, _, _, _ = np.polyfit(x,y,3,full=True)
+        p, pcov = np.polyfit(x,y,3,cov=True)
+        p_sigma = np.sqrt(np.diag(pcov))
+        fitfun = fn.pol3(p,p_sigma)
+        print (r'%s' % fitfun)
     elif fun == "pol4":
-        p,res, _, _, _ = np.polyfit(x,y,4,full=True)
+        p, pcov = np.polyfit(x,y,4,cov=True)
+        p_sigma = np.sqrt(np.diag(pcov))
+        fitfun = fn.pol4(p,p_sigma)
+        print (r'%s' % fitfun)
     elif fun == "pol5":
-        p,res, _, _, _ = np.polyfit(x,y,5,full=True)
+        p, pcov = np.polyfit(x,y,5,cov=True)
+        p_sigma = np.sqrt(np.diag(pcov))
+        fitfun = fn.pol5(p,p_sigma)
+        print (r'%s' % fitfun)
     # elif fun == "log":
     else:
         print("Wrong function")
-    return p,res
+    
+
+    return p,pcov
 
 plot(x_name, y_name_list, data, n, k)
 pregraph(y_name_list[-1], n)

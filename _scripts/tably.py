@@ -170,7 +170,7 @@ class Tably:
     def create_row(self, line, indent):
         """Creates a row based on `line` content"""
         check = str(line[0])
-        if (check.strip()[:5]) == 'graph':
+        if (check.strip()[:5]) == 'graph' or (check.strip()[:3]) == 'fit':
             return r''
         else:
             return r'{indent}{indent}{content} \\ \hline'.format(
