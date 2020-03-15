@@ -65,9 +65,10 @@ def plot(x_name, y_name_list, data, n, k):
         plt.scatter (x,y, marker = markers[i],
             color=palette[k], label="Observed, for "+y_name)
         if not args.fit:
+            cap=False
             pass
         else:
-            p,_= fit(x,y, fun)
+            p,_,cap= fit(x,y, fun)
             fitfig = np.poly1d(p)
             plt.plot(x,fitfig(x), linestyle='dotted',color=palette[k+1],label="Fitted Data")
         k+=1
@@ -78,53 +79,58 @@ def plot(x_name, y_name_list, data, n, k):
     plt.ylabel(r'%s'% y_name,fontsize = 13)
     plt.legend()
     f.savefig("../_assets/"+y_name.split(" ")[0]+str(n)+".pdf", bbox_inches = 'tight')
-    return 0
+    return cap
 
 file_name = file[:-4]
 
-def pregraph(name,n):
+def pregraph(name,n,cap):
     location = "./"+name.split(" ")[0]+str(n)+".pdf"
     tag = name.split(" ")[0]
     tag_new = tag.lower()
-    print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+tag+'}'+'\n'+'\\label{fig:\"'+tag_new+'\"}'+'\n'+'\\end{figure}')
+    #print (cap)
+    if not cap:
+        print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+tag+'}'+'\n'+'\\label{fig:\"'+tag_new+'\"}'+'\n'+'\\end{figure}')
+    else:
+        print ('\\begin{figure}[H]'+'\n'+'\\centering'+'\n'+'\\includegraphics[width = \\columnwidth]'+'{'+location+'}'+'\n'+'\\caption{'+tag+', '+cap+ '}'+'\n'+'\\label{fig:\"'+tag_new+'\"}'+'\n'+'\\end{figure}')       
     return 0
 
 def fit(x,y,fun):
-    # if fun == "expo":
-    #     func.expo()
     if fun == "lin":
         p, pcov = np.polyfit(x,y,1,cov=True)
         p_sigma = np.sqrt(np.diag(pcov))
         fitfun = fn.lin(p,p_sigma)
-        print (r'%s' % fitfun)
+        cap= (r'%s' % fitfun)
     elif fun == "pol2":
         p, pcov = np.polyfit(x,y,2,cov=True)
         p_sigma = np.sqrt(np.diag(pcov))
         fitfun = fn.pol2(p,p_sigma)
-        print (r'%s' % fitfun)
+        cap= (r'%s' % fitfun)
     elif fun == "pol3":
         p, pcov = np.polyfit(x,y,3,cov=True)
         p_sigma = np.sqrt(np.diag(pcov))
         fitfun = fn.pol3(p,p_sigma)
-        print (r'%s' % fitfun)
+        cap= (r'%s' % fitfun)
     elif fun == "pol4":
         p, pcov = np.polyfit(x,y,4,cov=True)
         p_sigma = np.sqrt(np.diag(pcov))
         fitfun = fn.pol4(p,p_sigma)
-        print (r'%s' % fitfun)
+        cap= (r'%s' % fitfun)
     elif fun == "pol5":
         p, pcov = np.polyfit(x,y,5,cov=True)
         p_sigma = np.sqrt(np.diag(pcov))
         fitfun = fn.pol5(p,p_sigma)
-        print (r'%s' % fitfun)
+        cap= (r'%s' % fitfun)
+    
+    # if fun == "expo":
+    #     func.expo()
     # elif fun == "log":
     else:
         print("Wrong function")
     
 
-    return p,pcov
+    return p,pcov,cap
 
-plot(x_name, y_name_list, data, n, k)
-pregraph(y_name_list[-1], n)
+cap = plot(x_name, y_name_list, data, n, k)
+pregraph(y_name_list[-1], n,cap)
 
 
