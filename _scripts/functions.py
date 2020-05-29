@@ -1,8 +1,4 @@
 import numpy
-from numpy import exp
-## exponential
-# def expo(x,a,b,c):
-#     return a*(exp(bx))+ c
 ## linear
 def lin(p,p_sigma):
     list(p)
@@ -29,3 +25,7 @@ def pol5(p,p_sigma):
 ## logarithm
 # def log(x,a,b,c):
 #     return a*(np.log(b*x)) + c
+
+## exponential
+# def expo(x,a,b,c):
+#     return a*(np.exp(b*x))+ c
