@@ -52,5 +52,6 @@ for file in os.listdir("../_assets/"):
 shutil.copy("../_layouts/"+documentstyle+".cls", path+"/"+documentstyle+".cls")
 shutil.rmtree("../_assets", ignore_errors=True, onerror=None)
 shutil.rmtree("../_scripts/__pycache__", ignore_errors=True, onerror=None)
-os.system("pdflatex "+path+"/report.tex")
+os.chdir(path)
+os.system("pdflatex report.tex")
 print("Your shit's sorted")

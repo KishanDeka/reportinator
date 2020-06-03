@@ -89,6 +89,12 @@ graph(x,y1,y2;x,y;..)
 ```
 Where x,y pairs are column pairs that need to be plotted. Without this tag at the end of the csv, the table will only be passed as a table, and not into graphs. Please run the code again if you get the same colors. It is normal to get the same color multiple times because the color is chosen at random, and there are only so many.
 
+For fitting, you need to add a line before the graph line. The errors and everything will be added in the caption.
+```
+fit(lin,lin...)
+```
+You can fit polynomial functions till 4 order.
+
 ## Advanced Usage (For Pros only):
 If you want some special code to run in a specific section, then you might edit the corresponding existing code, or make a python code with the name same as the name of the section and place it in `_scripts/`. **Please note that in its current state, the name of the code is case sensitive. Name it exactly the same as your section heading**. If your code has some errors, it will print out to your tex code, or wont print at all.
 

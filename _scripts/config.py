@@ -1,12 +1,5 @@
 # configurationfile
-
-
-
-
-
-
-
-reconfig=False
-name="Spandan Anupam"
-affiliation="NISER"
-style="single"
+reconfig=True
+name="Name"
+affiliation="Name"
+style="double"

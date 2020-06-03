@@ -63,15 +63,17 @@ def plot(x_name, y_name_list, data, n, k):
         y = data[y_name]
         y = list(map(float, y))
         plt.scatter (x,y, marker = markers[i],
-            color=palette[k], label="Observed, for "+y_name)
+            color='#FFA500', label="Observed, for "+y_name)
+        # palette[k]
         if not args.fit:
             cap=False
             pass
         else:
             p,_,cap= fit(x,y, fun)
             fitfig = np.poly1d(p)
-            plt.plot(x,fitfig(x), linestyle='dotted',color=palette[k+1],label="Fitted Data")
+            plt.plot(x,fitfig(x), linestyle='dotted',color='#000000',label="Fitted Data")
         k+=1
+        # palette[k+1]
         if k>len(palette)-1:
             k-=len(palette)-1
         i+=1
