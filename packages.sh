@@ -10,8 +10,6 @@ sudo apt-get install texlive
 # macos
 brew install git
 brew install python3
-brew install pandoc
-brew install pandoc-citeproc
 
 # pip packages
 pip3 install --upgrade pip
