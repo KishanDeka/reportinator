@@ -80,13 +80,13 @@ def plot(x_name, y_name_list, data, n, k):
     plt.xlabel(r'%s' % x_name,fontsize = 13)
     plt.ylabel(r'%s'% y_name,fontsize = 13)
     plt.legend()
-    f.savefig("../_assets/"+y_name.split(" ")[0]+str(n)+".pdf", bbox_inches = 'tight')
+    f.savefig("../_assets/"+str(n)+y_name.split(" ")[0]+str(n)+".pdf", bbox_inches = 'tight')
     return cap
 
 file_name = file[:-4]
 
 def pregraph(name,n,cap):
-    location = "./"+name.split(" ")[0]+str(n)+".pdf"
+    location = "./"+str(n)+name.split(" ")[0]+str(n)+".pdf"
     tag = name.split(" ")[0]
     tag_new = tag.lower()
     #print (cap)

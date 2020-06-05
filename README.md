@@ -117,7 +117,16 @@ This code supports templates. All the class files are to be stored in `_layouts/
 The graph python code uses seaborn, you may look at the different styles available in the internet for the same, and change it in `_scripts/figures.py`
 
 # To do:
-* Fitting in the graph
+* Proper fitting in the graph
+* Broken referencing system
+* Code goes gugu gaga when $ comes in a file name, that is, in y column
+* Error analysis code
+* Auto break for equations
+* Overall polishing
+* Consistent font size and column width in tabless
+* Include referencer into reportinator (make new section with doi list)
+* Make fit and graph parameters interchangeable
+* Include checking for the required installations when first run
 
 # Example:
 One example has been given in the program at `example_source`

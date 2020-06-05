@@ -1,5 +1,5 @@
 # configurationfile
 reconfig=True
-name="Name"
-affiliation="Name"
+name="Rick Astley"
+affiliation="NGGYU"
 style="double"
