@@ -126,6 +126,7 @@ The graph python code uses seaborn, you may look at the different styles availab
 * Consistent font size and column width in tabless
 * Include referencer into reportinator (make new section with doi list)
 * Make fit and graph parameters interchangeable
+* Limited significant figures in table data
 * Include checking for the required installations when first run
 
 # Example:
